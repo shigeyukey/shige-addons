@@ -1,0 +1,246 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Embedded Image</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Arial', sans-serif;
+            }
+            .wrapper {
+                display: block;
+                height: 100%;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+            a {
+                display: block;
+                max-width: 100%;
+                max-height: 80%;
+            }
+
+            a:hover {
+                cursor: pointer;
+            }
+            .image-container {
+                width: 400px;
+                height: 255px;
+                position: relative;
+                border: 1px solid #000;
+                box-sizing: border-box;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                display: none;
+            }
+            .button-container {
+                margin-top: 10px;
+            }
+            button {
+                margin: 2px;
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+            #loading {
+                font-size: 20px;
+                color: gray;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            #shigeAddons {
+            font-size: 16px;
+            color: gray;
+            }
+            
+            #description {
+                margin-top: 10px;
+                font-size: 12px;
+            }
+            #label {
+                margin-top: 10px;
+                font-size: 16px;
+            }
+            .selected-button {
+                background-color: #007BFF;
+                color: white;
+            }
+            .arrow {
+                cursor: pointer;
+                font-size: 24px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1000;
+            }
+            .left-arrow {
+                left: 10px;
+            }
+            .right-arrow {
+                right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <div id="shigeAddons">Add-ons created, fixed, and customized by Shigeyuki.</div>
+                <div class="image-container">
+                    <div id="loading">No image</div>
+                    <img id="image" src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp" onload="hideLoading()">
+                </div>
+                <span class="arrow left-arrow" onclick="prevImage()">&#9664;</span>
+                <span class="arrow right-arrow" onclick="nextImage()">&#9654;</span>
+                <a id="description-link" href="https://youtu.be/t50NZagCsYk" target="_blank">
+                    <div id="label">⚔️AnkiArcade Medley</div>
+                </a>
+                    <div id="description">(Patron) multiple mini games, progress bar, pomodoro timer, and more.</div>
+                <div class="button-container">
+                    <button id="button-0"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp',                '(Patron) multiple mini games, progress bar, pomodoro timer, and more.',                    'https://youtu.be/t50NZagCsYk',                        '⚔️AnkiArcade Medley',                    0)">⚔️AnkiArcade Medley</button>
+<button id="button-1"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon(01).webp',                '(Patron) You can grow crops and flowers with the new cards you have learned.',                    'https://youtu.be/6NO7uEgKRbQ',                        '🌱New Cards Farm 2',                    1)">🌱New Cards Farm 2</button>
+<button id="button-2"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_new_cards_farm.webp',                '(Patron) You can grow crops and flowers with the new cards you have learned.',                    'https://youtu.be/J_5MUjeBEkA',                        '🌱New Cards Farm',                    2)">🌱New Cards Farm</button>
+<button id="button-3"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/new_card_heatmap.webp',                '(Patron) Show calendar and streaks of New cards learned, like the review heatmap.',                    'https://www.patreon.com/posts/how-to-use-new-0-102591888?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link',                        '📅New Card Heatmap',                    3)">📅New Card Heatmap</button>
+<button id="button-4"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon-dinotimer.webp',                '(Patron) DinoTimer - Raising Dinosaurs with Pomodoro Study.',                    'https://youtu.be/LO76BX6RBmE',                        '🦖Dinotimer',                    4)">🦖Dinotimer</button>
+<button id="button-5"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_pomotimer.webp',                '(Patron) Circular progress bar with transparent background.',                    'https://youtu.be/nPQdhgB_vH8',                        '🍅Pomotimer',                    5)">🍅Pomotimer</button>
+<button id="button-6"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_AnkiKnights%20and%20Dragons.webp',                '(Patron) The knights fight many monsters.',                    'https://youtu.be/wYUzx3xKqq8',                        '⚔️AnkiKnights and Dragons',                    6)">⚔️AnkiKnights and Dragons</button>
+<button id="button-7"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_little_Ankimare.webp',                '(Patron) The hooded protagonist explores a mysterious cave in search of gemstones.',                    'https://youtu.be/YvsdcOj6uxA',                        '💎Little Ankimare',                    7)">💎Little Ankimare</button>
+<button id="button-8"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_study_with_Zombie.webp',                '(Patron) Improved version of Doomanki, zombie emerges.',                    'https://youtu.be/twJ6PRkbEUE',                        '🧟Study with Zombie',                    8)">🧟Study with Zombie</button>
+<button id="button-9"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_Resident_Anki.webp',                '(Patron) Shooting Game with Mini Zombies.',                    'https://youtu.be/OARrRkRskeo',                        '🧟Resident Anki',                    9)">🧟Resident Anki</button>
+<button id="button-10"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Doomanki.webp',                '(Patron) Anki addon like FPS game. When you answer, gun animations, gunshot sounds, explosions.',                    'https://youtu.be/e3vOxR9WGKY',                        '🔫Doomanki',                    10)">🔫Doomanki</button>
+<button id="button-11"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_meowknight.webp',                '(Patron) Cat knight fighting theme.',                    'https://youtu.be/Li4-lM8G7QM',                        '🐱Meowknight',                    11)">🐱Meowknight</button>
+<button id="button-12"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_cats.webp',                '(Patron) Cats walking and running around.',                    'https://youtu.be/0FjSCkGsmIU',                        '🐱Cat Gathering in Anki',                    12)">🐱Cat Gathering in Anki</button>
+<button id="button-13"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/top_toolbar_icons.webp',                '(Patron) Decks Add-Browse-Stats-Sync',                    'https://www.patreon.com/posts/102519235',                        '🎨Top toolbar icons',                    13)">🎨Top toolbar icons</button>
+<button id="button-14"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_mozartanki.webp',                '(Patron) MIDI music player with 328 classical music tracks.',                    'https://youtu.be/Joo2Psc5DaE',                        '🎵Mozartanki',                    14)">🎵Mozartanki</button>
+<button id="button-15"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_CatGirlandSushi.webp',                '(Patron) Cute CatGirl eats a lot of Sushi.',                    'https://youtu.be/oX0IClAFTxA',                        '🐱Cat Girl and Sushi',                    15)">🐱Cat Girl and Sushi</button>
+<button id="button-16"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_redwitch_darkwitch.webp',                '(Patron) Wizard transforms',                    'https://youtu.be/beS1P40-FJ4',                        '🧙Redwitch Darkwitch',                    16)">🧙Redwitch Darkwitch</button>
+<button id="button-17"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/just_do_it_timer.webp',                '(Patron) Pomodoro timer with voice and animation that shouts JustDoIt when the time is up.',                    'https://youtu.be/ggi2_goRFoU',                        '🔥Just Do Anki timer',                    17)">🔥Just Do Anki timer</button>
+<button id="button-18"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_terminator.webp',                '(Patron) Cute mascot character for Ankis reviews.',                    'https://youtu.be/XNijnd-0MsA',                        '🤖AnkiTerminator SR-800',                    18)">🤖AnkiTerminator SR-800</button>
+<button id="button-19"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_v-ankipad.webp',                '(Patron) Review screens will show answer buttons like the gamepad.',                    'https://youtu.be/-wnvkWz8GHg',                        '🎮Virtual Ankipad',                    19)">🎮Virtual Ankipad</button>
+<button id="button-20"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_ambient.webp',                '(Patron) Ambient sounds such as bonfires and rainfall are played instead of music.',                    'https://youtu.be/J5Jd0aM-8BI',                        '⭐Ambient',                    20)">⭐Ambient</button>
+<button id="button-21"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_zenmode.webp',                '(Patron) Turns off all animation, progress bar, and music.',                    'https://youtu.be/05s_fEXp9fI',                        '🧘‍♀Zenmode',                    21)">🧘‍♀Zenmode</button>
+<button id="button-22"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Anki_Leader_bord.webp',                '(Free, Custom) Compete with friends to boost motivation',                    'https://ankiweb.net/shared/info/175794613',                        '🏆Anki Leaderboard',                    22)">🏆Anki Leaderboard</button>
+<button id="button-23"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/anki_kill_streaks.webp',                '(Free, Fixed) Reward Medals for Correct Answers',                    'https://ankiweb.net/shared/info/1562475180',                        '🎖️Anki Killstreaks',                    23)">🎖️Anki Killstreaks</button>
+<button id="button-24"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Animated_coins.webp',                '(Patron) You can add animated coins to the Anki killstreaks.',                    'https://www.patreon.com/posts/how-to-use-anki-99615150?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link',                        '🎖️Animation coins',                    24)">🎖️Animation coins</button>
+<button id="button-25"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/progress_bar.webp',                '(Free, Custom) Visualize reviewed cards and remaining',                    'https://ankiweb.net/shared/info/1708250053',                        '⌛️Progress bar',                    25)">⌛️Progress bar</button>
+<button id="button-26"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_progress_bar_for_Anki_how_to_use.webp',                '(Patron) Progress bars for chunking Anki cards.',                    'https://youtu.be/x8M1jAs4dpk',                        '⌛️Progress Bar for Anki',                    26)">⌛️Progress Bar for Anki</button>
+<button id="button-27"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/pokemanki.webp',                '(Free, Custom) Raising Pokemon with Anki.',                    'https://ankiweb.net/shared/info/1677779223',                        '🎮️Pokemanki Gold',                    27)">🎮️Pokemanki Gold</button>
+<button id="button-28"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/AnkiTerminator_Thumbnail.webp',                '(Free, Original) ChatGPT Sidebar for Review, GoogleBard, BingChat',                    'https://youtu.be/rLXM63Jc8ng',                        '🤖AnkiTerminator-AI',                    28)">🤖AnkiTerminator-AI</button>
+<button id="button-29"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/NoDistractionsFullScreen.webp',                '(Free, Fixed) Hides all the distractions such as menu bars, etc., there are cool answer buttons.',                    'https://ankiweb.net/shared/info/1370336700',                        '🖥️No Distractions Full Screen',                    29)">🖥️No Distractions Full Screen</button>
+<button id="button-30"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AlwaysOnTop.webp',                '(Free, Fixed) permanently keep Anki as top',                    'https://ankiweb.net/shared/info/1045980020',                        '🔝Always On Top',                    30)">🔝Always On Top</button>
+<button id="button-31"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/zoom24.webp',                '(Free, Custom) Keep zoom level after reboot',                    'https://ankiweb.net/shared/info/1923741581',                        '🔍️Zoom for Anki24',                    31)">🔍️Zoom for Anki24</button>
+<button id="button-32"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiRedesign.webp',                '(Free, Fixed) Make Anki Cool Design',                    'https://ankiweb.net/shared/info/1959668791',                        '🎨Anki Redesign',                    32)">🎨Anki Redesign</button>
+<button id="button-33"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/break_timer.webp',                '(Free, Original) After 10 cards, take a 3 minute break',                    'https://ankiweb.net/shared/info/174058935',                        '☕Break Timer',                    33)">☕Break Timer</button>
+<button id="button-34"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/todayAgainCount.webp',                '(Free, Original) Display todays Again count in menu bar for each card',                    'https://ankiweb.net/shared/info/50293437',                        '🎮Today Again Count',                    34)">🎮Today Again Count</button>
+<button id="button-35"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_ankiRestart.webp',                '(Free, Original) just adds a reboot button to the menu bar.',                    'https://youtu.be/q8c_POBOcMg',                        '🔂AnkiRestart',                    35)">🔂AnkiRestart</button>
+<button id="button-36"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/tidyankibear.webp',                '(Free, Original) Select and hide Anki menu bar items.',                    'https://ankiweb.net/shared/info/906950015',                        '🐻Tidyankibear',                    36)">🐻Tidyankibear</button>
+<button id="button-37"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Rearrange_home_addons.webp',                '(Free, Original) Rearrange the add-ons displayed on Ankis home screen.',                    'https://ankiweb.net/shared/info/1797615099',                        '📌Rearrange home addons',                    37)">📌Rearrange home addons</button>
+<button id="button-38"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/EaseScouter_thumbnail.webp',                '(Patron) Visual feedback on Ease, Answer and Interval with multilingual text. ',                    'https://youtu.be/rB9JgY0JHHQ',                        '👓️EaseScouter',                    38)">👓️EaseScouter</button>
+<button id="button-39"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/An_Ki_Oh_thumbnail.webp',                '(Patron) Anki card templates like a monster card game.',                    'https://youtu.be/7F0uWskPwyc',                        '🃏An-ki-oh!',                    39)">🃏An-ki-oh!</button>
+<button id="button-40"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Bulk_Image_Downloader.webp',                '(Free, Original) Add images to many cards at once, and quickly add images to cards during reviews.',                    'https://ankiweb.net/shared/info/8280891',                        '🦾Bulk Image Downloader',                    40)">🦾Bulk Image Downloader</button>
+<button id="button-41"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Editor_Auto_Show.webp',                '(Free, Original) Editor auto show or hide during review',                    'https://ankiweb.net/shared/info/1715279230',                        '📝Editor auto show',                    41)">📝Editor auto show</button>
+<button id="button-42"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/DiscordSidebar.webp',                '(Free, Original) Chat room within Anki',                    'https://ankiweb.net/shared/info/33855257',                        '📱Anki Discord Sidebar',                    42)">📱Anki Discord Sidebar</button>
+<button id="button-43"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AutoHighlight.webp',                '(Free, Custom) auto Highlight Cloze of selected card in Browser.',                    'https://ankiweb.net/shared/info/210078606',                        '🖌️Auto Highlight Cloze in Browser',                    43)">🖌️Auto Highlight Cloze in Browser</button>
+<button id="button-44"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/GraphView.webp',                '(Free, Fixed) Link notes and visualize connections ',                    'https://ankiweb.net/shared/info/1068714931',                        '📊Graph View',                    44)">📊Graph View</button>
+<button id="button-45"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/PreviewSlideshow.webp',                '(Free, Fixed) Make Anki preview window as slideshow.',                    'https://ankiweb.net/shared/info/1621302762',                        '⏩Preview Slideshow',                    45)">⏩Preview Slideshow</button>
+<button id="button-46"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/RandomSprite.webp',                '(Free, Fixed) Find new random image on cards',                    'https://ankiweb.net/shared/info/1956685960',                        '👾Random Sprites',                    46)">👾Random Sprites</button>
+<button id="button-47"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiIPA.webp',                '(Free, Fixed) Add phonetic symbols',                    'https://ankiweb.net/shared/info/391848360',                        '🔊Anki IPA',                    47)">🔊Anki IPA</button>
+<button id="button-48"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiOCR.webp',                '(Free, Fixed) Generate OCR text from images.',                    'https://ankiweb.net/shared/info/546383173',                        '📸Anki OCR',                    48)">📸Anki OCR</button>
+<button id="button-49"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/PasteOCR.webp',                '(Free, Fixed) Paste image as text.',                    'https://ankiweb.net/shared/info/1808435406',                        '📸PasteOCR',                    49)">📸PasteOCR</button>
+<button id="button-50"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/BrowserExternalEditor.webp',                '(Free, Fixed) open separate window',                    'https://ankiweb.net/shared/info/1284875472',                        '📝Browser external editor',                    50)">📝Browser external editor</button>
+<button id="button-51"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiConnectDowngrader.webp',                '(Free, Fixed) for downgrading Anki Connect.',                    'https://ankiweb.net/shared/info/1485099361',                        '🔙Anki Connect Downgrader',                    51)">🔙Anki Connect Downgrader</button>
+<button id="button-52"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnkiPet.webp',                '(Free, Fixed) gamify your learning by caring for a pet ',                    'https://ankiweb.net/shared/info/2026040256',                        '🐤AnkiPet (Fixed,Free)',                    52)">🐤AnkiPet (Fixed,Free)</button>
+<button id="button-53"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnniesCatEmporium.webp',                '(Free, Fixed) For every UWorld block completed, the plug-in will give the user one cat.',                    'https://ankiweb.net/shared/info/741979554',                        '🐈️Annies Cat Emporium',                    53)">🐈️Annies Cat Emporium</button>
+<button id="button-54"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnswerFeedback.webp',                '(Free, Custom) Answer feedback, same as Ankimote.',                    'https://ankiweb.net/shared/info/724185003',                        '🎮️Answer feedback',                    54)">🎮️Answer feedback</button>
+<button id="button-55"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/Beeline.webp',                '(Free, Fixed) Color gradients for better Reading Focus',                    'https://ankiweb.net/shared/info/122706731',                        '🐝BeeLine',                    55)">🐝BeeLine</button>
+<button id="button-56"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/CopyNotes.webp',                '(Free, Fixed) Allow to copy notes selected in the browser. ',                    'https://ankiweb.net/shared/info/800604861',                        '📋Copy notes',                    56)">📋Copy notes</button>
+<button id="button-57"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/googleDictionary.webp',                '(Free, Fixed) add Google Dictionary results to vocabulary entries',                    'https://ankiweb.net/shared/info/1947506677',                        '🌍️Google Dictionary',                    57)">🌍️Google Dictionary</button>
+<button id="button-58"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AddNotesID.webp',                '(Free, Fixed) adds a uuid to an empty field Note ID when opening edit note window.',                    'https://ankiweb.net/shared/info/8897764',                        '🆔Add note ID',                    58)">🆔Add note ID</button>
+<button id="button-59"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/MultiDeckInporter.webp',                '(Free, Fixed) to import multiple decks at a time.',                    'https://ankiweb.net/shared/info/1563006742',                        '📥Multi Deck Importer',                    59)">📥Multi Deck Importer</button>
+<button id="button-60"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/LeechToolKit.webp',                '(Free, Fixed) Advanced leech tag management',                    'https://ankiweb.net/shared/info/1633380637',                        '🩸Leech Toolkit ',                    60)">🩸Leech Toolkit </button>
+<button id="button-61"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/Dict2Anki.webp',                '(Free, Fixed) for native Chinese speakers',                    'https://ankiweb.net/shared/info/1019143216',                        '🐼Dict2Anki',                    61)">🐼Dict2Anki</button>
+<button id="button-62"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/NoSpaceDash.webp',                '(Free, Fixed) Prevents answer for 1.5 seconds',                    'https://ankiweb.net/shared/info/1573867049',                        '🏃🏻No Space Dash',                    62)">🏃🏻No Space Dash</button>
+<button id="button-63"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/RemoveTooltip.webp',                '(Free, Custom) to remove tooltips for buttons like Shortcut key',                    'https://ankiweb.net/shared/info/1845966780',                        '👻Remove tooltip for Answer buttons',                    63)">👻Remove tooltip for Answer buttons</button>
+<button id="button-64"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/RenderedBrowser.webp',                '(Free, Fixed) Show multiple cards at once ',                    'https://ankiweb.net/shared/info/648503413',                        '🔍Rendered Browser',                    64)">🔍Rendered Browser</button>
+<button id="button-65"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/reset%20card%20scheduring.webp',                '(Free, Fixed) handling accidentally imported scheduling data from other users.',                    'https://ankiweb.net/shared/info/83793850',                        '🗑️Reset Card Scheduling',                    65)">🗑️Reset Card Scheduling</button>
+<button id="button-66"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/ReviewHighlighter.webp',                '(Free, Original) Auto highlight card text in order',                    'https://ankiweb.net/shared/info/452681944',                        '🖍️Review Highlighter',                    66)">🖍️Review Highlighter</button>
+<button id="button-67"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/SimpleTimer.webp',                '(Free, Fixed) Built-in Clock, Timer and Stopwatch ',                    'https://ankiweb.net/shared/info/2041168053',                        '⏰️Simple Timer and Stopwatch',                    67)">⏰️Simple Timer and Stopwatch</button>
+<button id="button-68"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/Syllabus.webp',                '(Free, Fixed) Anki Statistics and Export by Tag and Deck',                    'https://ankiweb.net/shared/info/1403834620',                        '📊Syllabus',                    68)">📊Syllabus</button>
+<button id="button-69"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/SyncToObsidian.webp',                '(Free, Fixed) helps sync selected Anki note to your Obsidian vault.',                    'https://ankiweb.net/shared/info/1979329733',                        '🪨Sync to Obsidian',                    69)">🪨Sync to Obsidian</button>
+<button id="button-70"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/TagStatistics.webp',                '(Free, Fixed) adds a dialog to Anki that displays some statistics about your tags.',                    'https://ankiweb.net/shared/info/1269070743',                        '📊Tag Statistics',                    70)">📊Tag Statistics</button>
+<button id="button-71"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/TemplatesImportAndExport.webp',                '(Free, Fixed) A tool for Anki user to import export CSS and card templates of all note types.',                    'https://ankiweb.net/shared/info/2032572419',                        '📤Templates Import and Export',                    71)">📤Templates Import and Export</button>
+<button id="button-72"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/MathDelimitersReplacer.webp',                '(Free, Fixed) for LaTex MathJax',                    'https://ankiweb.net/shared/info/401047458',                        '🧮Math Delimiters Replacer',                    72)">🧮Math Delimiters Replacer</button>
+<button id="button-73"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/TriggerAndActions.webp',                '(Free, Fixed) Change card based on another ',                    'https://ankiweb.net/shared/info/119880939',                        '⛓️Trigger and actions',                    73)">⛓️Trigger and actions</button>
+<button id="button-74"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AddMediaEasy.webp',                '(Free, Fixed) to speed up the routine process of adding media files.',                    'https://ankiweb.net/shared/info/1920408989',                        '🖼️Add media easy',                    74)">🖼️Add media easy</button>
+<button id="button-75"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AutoEaseFactor.webp',                '(Free, Fixed) Dynamically adjusts ease factor on cards automatically after each rep',                    'https://ankiweb.net/shared/info/179120908',                        '📊Auto Ease Factor',                    75)">📊Auto Ease Factor</button>
+<button id="button-76"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/HistoryRecorder.webp',                '(Free, Fixed) word cloud and statistics ',                    'https://ankiweb.net/shared/info/510715849',                        '💾History Recorder',                    76)">💾History Recorder</button>
+<button id="button-77"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/ScrollinReviewer.webp',                '(Free, Fixed) Scroll in reviewer with vi vim-like keys j and k ',                    'https://ankiweb.net/shared/info/1241205467',                        '🖱️Scroll in reviewer',                    77)">🖱️Scroll in reviewer</button>
+<button id="button-78"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/ReadableAddonsFolder.webp',                '(Free, Custom)  containing symlinks with the name of the add-on to the add-on folder.',                    'https://ankiweb.net/shared/info/158759867',                        '📂Readable Addons Folder',                    78)">📂Readable Addons Folder</button>
+<button id="button-79"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_simple_fix.webp',                '(Contact) You can send me repair requests for broken add-ons.(Free)',                    'https://www.patreon.com/posts/free-simple-fix-99149368',                        '🔧Fix broken add-ons',                    79)">🔧Fix broken add-ons</button>
+
+                </div>
+            </div>
+        </div>
+        <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+        <script>
+            var currentSelectedButton = 0;
+
+            function hideLoading() {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('image').style.display = 'block';
+            }
+
+            function changeImage(newSrc, description, link, label, buttonIndex) {
+                document.getElementById('image').style.display = 'none';
+
+                document.getElementById('loading').style.display = 'flex';
+                document.getElementById('image').src = newSrc;
+                document.getElementById('description').innerText = description;
+                document.getElementById('label').innerText = label;
+                document.getElementById('description-link').href = link;
+                document.getElementById('button-' + currentSelectedButton).classList.remove('selected-button');
+                document.getElementById('button-' + buttonIndex).classList.add('selected-button');
+                currentSelectedButton = buttonIndex;
+            }
+
+            function prevImage() {
+                var newIndex = (currentSelectedButton - 1 + 80) % 80;
+                var button = document.getElementById('button-' + newIndex);
+                button.click();
+            }
+
+            function nextImage() {
+                var newIndex = (currentSelectedButton + 1) % 80;
+                var button = document.getElementById('button-' + newIndex);
+                button.click();
+            }
+
+            document.getElementById('description-link').addEventListener('click', function() {
+                console.log('Description link clicked');
+            });
+
+            new QWebChannel(qt.webChannelTransport, function(channel) {
+                window.pyObj = channel.objects.pyObj;
+            });
+
+            window.onload = function() {
+                changeImage("https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp", "(Patron) multiple mini games, progress bar, pomodoro timer, and more.", "https://youtu.be/t50NZagCsYk", "⚔️AnkiArcade Medley", 0);
+            };
+
+        </script>
+    </body>
+    </html>
+    
