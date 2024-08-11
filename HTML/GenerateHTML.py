@@ -226,6 +226,9 @@ def generate_html_content(buttons):
                 qt.webChannelTransport = {{}};
             }}
 
+            console.log = function() {{
+            }};
+
         </script>
     </body>
     </html>
