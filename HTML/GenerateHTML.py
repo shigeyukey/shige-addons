@@ -169,9 +169,19 @@ def generate_html_content(buttons):
                 window.pyObj = channel.objects.pyObj;
             }});
 
+            // window.onload = function() {{
+            //     changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
+            // }};
+
             window.onload = function() {{
+                var images = [];
+                for (var i = 0; i < {len(buttons)}; i++) {{
+                    images[i] = new Image();
+                    images[i].src = "{buttons[i]['url']}";
+                }}
                 changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
             }};
+
 
         </script>
     </body>

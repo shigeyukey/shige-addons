@@ -236,9 +236,19 @@
                 window.pyObj = channel.objects.pyObj;
             });
 
+            // window.onload = function() {
+            //     changeImage("https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp", "(Patron) multiple mini games, progress bar, pomodoro timer, and more.", "https://youtu.be/t50NZagCsYk", "⚔️AnkiArcade Medley", 0);
+            // };
+
             window.onload = function() {
+                var images = [];
+                for (var i = 0; i < 80; i++) {
+                    images[i] = new Image();
+                    images[i].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_simple_fix.webp";
+                }
                 changeImage("https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp", "(Patron) multiple mini games, progress bar, pomodoro timer, and more.", "https://youtu.be/t50NZagCsYk", "⚔️AnkiArcade Medley", 0);
             };
+
 
         </script>
     </body>
