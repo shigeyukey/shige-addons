@@ -12,6 +12,40 @@ def generate_html_content(buttons):
                     {i})">{button["label"]}</button>\n'
 
     js_code = """
+
+    window.onerror = function(message, source, lineno, colno, error) {
+        // すべてのエラーを無視する
+        return true;
+    };
+
+    console.error = function() {
+        // すべてのエラーメッセージを無視する
+    };
+
+    console.warn = function() {
+        // すべての警告メッセージを無視する
+    };
+
+    console.log = function() {
+        // すべてのログメッセージを無視する
+    };
+
+    // qt が未定義の場合の対策
+    if (typeof qt === 'undefined') {
+        var qt = {};
+        qt.webChannelTransport = {};
+    }
+
+    // Permissions-Policy ヘッダーのエラーを無視する
+    document.addEventListener('securitypolicyviolation', function(e) {
+        if (e.violatedDirective === 'Permissions-Policy') {
+            return true;
+        }
+    });
+
+
+
+
     window.onload = function() {
         var images = [];
         var promises = [];
@@ -211,23 +245,6 @@ def generate_html_content(buttons):
             // }};
 
             {js_code}
-
-            window.onerror = function(message, source, lineno, colno, error) {{
-                return true;
-            }};
-
-            console.error = function() {{
-            }};
-            console.warn = function() {{
-            }};
-
-            if (typeof qt === 'undefined') {{
-                var qt = {{}};
-                qt.webChannelTransport = {{}};
-            }}
-
-            console.log = function() {{
-            }};
 
         </script>
     </body>
