@@ -213,9 +213,12 @@ def generate_html_content(buttons):
             {js_code}
 
             window.onerror = function(message, source, lineno, colno, error) {{
-                // エラーを無視する
                 return true;
             }};
+
+            console.error = function() {{
+            }};
+
 
         </script>
     </body>
