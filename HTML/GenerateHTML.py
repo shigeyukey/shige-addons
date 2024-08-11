@@ -218,7 +218,13 @@ def generate_html_content(buttons):
 
             console.error = function() {{
             }};
+            console.warn = function() {{
+            }};
 
+            if (typeof qt === 'undefined') {{
+                var qt = {{}};
+                qt.webChannelTransport = {{}};
+            }}
 
         </script>
     </body>
