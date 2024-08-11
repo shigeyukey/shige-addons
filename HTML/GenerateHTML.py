@@ -11,6 +11,26 @@ def generate_html_content(buttons):
                         \'{button["label"]}\',\
                     {i})">{button["label"]}</button>\n'
 
+    js_code = """
+    window.onload = function() {
+        var images = [];
+    """
+    for i, button in enumerate(buttons):
+        js_code += f"""
+        images[{i}] = new Image();
+        images[{i}].src = "{button['url']}";
+        images[{i}].onload = function() {{
+            console.log('Image {i} loaded');
+        }};
+    """
+    js_code += f"""
+        changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
+    }};
+    """
+
+
+
+
     HTML_CONTENT = f"""
     <!DOCTYPE html>
     <html>
@@ -173,14 +193,7 @@ def generate_html_content(buttons):
             //     changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
             // }};
 
-            window.onload = function() {{
-                var images = [];
-                for (var i = 0; i < {len(buttons)}; i++) {{
-                    images[i] = new Image();
-                    images[i].src = "{buttons[i]['url']}";
-                }}
-                changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
-            }};
+            {js_code}
 
 
         </script>
