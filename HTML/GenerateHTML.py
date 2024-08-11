@@ -49,6 +49,7 @@ def generate_html_content(buttons):
     HTML_CONTENT = f"""
     <!DOCTYPE html>
     <html>
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <head>
         <title>Embedded Image</title>
         <style>
