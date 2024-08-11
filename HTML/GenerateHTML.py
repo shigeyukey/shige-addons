@@ -159,12 +159,13 @@ def generate_html_content(buttons):
         </div>
         <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
         <script>
-            var currentSelectedButton = 0;
 
             function hideLoading() {{
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('image').style.display = 'block';
             }}
+
+            var currentSelectedButton = 0;
 
             function changeImage(newSrc, description, link, label, buttonIndex) {{
                 document.getElementById('image').style.display = 'none';
