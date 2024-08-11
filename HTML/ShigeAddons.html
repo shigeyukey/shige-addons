@@ -32,12 +32,31 @@
                 cursor: pointer;
             }
             .image-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 255px;
+                position: relative;
+            }
+            .image-container .side-container {
+                width: 24px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .image-container .center-container {
                 width: 400px;
                 height: 255px;
                 position: relative;
                 border: 1px solid #000;
                 box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
+
             img {
                 width: 100%;
                 height: 100%;
@@ -83,16 +102,6 @@
             .arrow {
                 cursor: pointer;
                 font-size: 24px;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 1000;
-            }
-            .left-arrow {
-                left: 10px;
-            }
-            .right-arrow {
-                right: 10px;
             }
         </style>
     </head>
@@ -101,12 +110,18 @@
             <div class="container">
                 <div id="shigeAddons">Add-ons created, fixed, and customized by Shigeyuki.</div>
                 <div class="image-container">
-                    <div id="loading">No image</div>
-                    <img id="image" src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp" onload="hideLoading()">
+                    <div class="side-container">
+                        <span class="arrow left-arrow" onclick="prevImage()">&#9664;</span>
+                    </div>
+                    <div class="center-container">
+                        <div id="loading">No image</div>
+                        <img id="image" src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp" onload="hideLoading()">
+                    </div>
+                    <div class="side-container">
+                        <span class="arrow right-arrow" onclick="nextImage()">&#9654;</span>
+                    </div>
                 </div>
-                <span class="arrow left-arrow" onclick="prevImage()">&#9664;</span>
-                <span class="arrow right-arrow" onclick="nextImage()">&#9654;</span>
-                <a id="description-link" href="https://youtu.be/t50NZagCsYk" target="_blank">
+            <a id="description-link" href="https://youtu.be/t50NZagCsYk" target="_blank">
                     <div id="label">⚔️AnkiArcade Medley</div>
                 </a>
                     <div id="description">(Patron) multiple mini games, progress bar, pomodoro timer, and more.</div>

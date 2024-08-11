@@ -66,31 +66,12 @@ def generate_html_content(buttons):
                 cursor: pointer;
             }}
             .image-container {{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 255px;
-                position: relative;
-            }}
-            .image-container .side-container {{
-                width: 24px;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }}
-            .image-container .center-container {{
                 width: 400px;
                 height: 255px;
                 position: relative;
                 border: 1px solid #000;
                 box-sizing: border-box;
-                display: flex;
-                justify-content: center;
-                align-items: center;
             }}
-
             img {{
                 width: 100%;
                 height: 100%;
@@ -136,6 +117,16 @@ def generate_html_content(buttons):
             .arrow {{
                 cursor: pointer;
                 font-size: 24px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1000;
+            }}
+            .left-arrow {{
+                left: 10px;
+            }}
+            .right-arrow {{
+                right: 10px;
             }}
         </style>
     </head>
@@ -144,18 +135,12 @@ def generate_html_content(buttons):
             <div class="container">
                 <div id="shigeAddons">Add-ons created, fixed, and customized by Shigeyuki.</div>
                 <div class="image-container">
-                    <div class="side-container">
-                        <span class="arrow left-arrow" onclick="prevImage()">&#9664;</span>
-                    </div>
-                    <div class="center-container">
-                        <div id="loading">No image</div>
-                        <img id="image" src="{buttons[0]['url']}" onload="hideLoading()">
-                    </div>
-                    <div class="side-container">
-                        <span class="arrow right-arrow" onclick="nextImage()">&#9654;</span>
-                    </div>
+                    <div id="loading">No image</div>
+                    <img id="image" src="{buttons[0]['url']}" onload="hideLoading()">
                 </div>
-            <a id="description-link" href="{buttons[0]['link']}" target="_blank">
+                <span class="arrow left-arrow" onclick="prevImage()">&#9664;</span>
+                <span class="arrow right-arrow" onclick="nextImage()">&#9654;</span>
+                <a id="description-link" href="{buttons[0]['link']}" target="_blank">
                     <div id="label">{buttons[0]['label']}</div>
                 </a>
                     <div id="description">{buttons[0]['description']}</div>
