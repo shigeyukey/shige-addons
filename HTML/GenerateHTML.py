@@ -19,9 +19,6 @@ def generate_html_content(buttons):
         js_code += f"""
         images[{i}] = new Image();
         images[{i}].src = "{button['url']}";
-        images[{i}].onload = function() {{
-            console.log('Image {i} loaded');
-        }};
     """
     js_code += f"""
         changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
