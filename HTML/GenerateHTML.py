@@ -14,14 +14,27 @@ def generate_html_content(buttons):
     js_code = """
     window.onload = function() {
         var images = [];
+        var promises = [];
     """
     for i, button in enumerate(buttons):
         js_code += f"""
-        images[{i}] = new Image();
-        images[{i}].src = "{button['url']}";
+        promises.push(new Promise(function(resolve, reject) {{
+            images[{i}] = new Image();
+            images[{i}].src = "{button['url']}";
+            images[{i}].onload = function() {{
+                resolve();
+            }};
+            images[{i}].onerror = function() {{
+                reject();
+            }};
+        }}));
     """
     js_code += f"""
-        changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
+        Promise.all(promises).then(function() {{
+            changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
+        }}).catch(function() {{
+            console.error('Failed to preload images');
+        }});
     }};
     """
 
