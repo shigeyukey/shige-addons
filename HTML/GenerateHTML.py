@@ -12,68 +12,20 @@ def generate_html_content(buttons):
                     {i})">{button["label"]}</button>\n'
 
     js_code = """
-
-    window.onerror = function(message, source, lineno, colno, error) {
-        // すべてのエラーを無視する
-        return true;
-    };
-
-    console.error = function() {
-        // すべてのエラーメッセージを無視する
-    };
-
-    console.warn = function() {
-        // すべての警告メッセージを無視する
-    };
-
-    console.log = function() {
-        // すべてのログメッセージを無視する
-    };
-
-    // qt が未定義の場合の対策
-    if (typeof qt === 'undefined') {
-        var qt = {};
-        qt.webChannelTransport = {};
-    }
-
-    // Permissions-Policy ヘッダーのエラーを無視する
-    document.addEventListener('securitypolicyviolation', function(e) {
-        if (e.violatedDirective === 'Permissions-Policy') {
-            return true;
-        }
-    });
-
-
-
-
     window.onload = function() {
         var images = [];
-        var promises = [];
     """
     for i, button in enumerate(buttons):
         js_code += f"""
-        promises.push(new Promise(function(resolve, reject) {{
-            images[{i}] = new Image();
-            images[{i}].src = "{button['url']}";
-            images[{i}].onload = function() {{
-                resolve();
-            }};
-            images[{i}].onerror = function() {{
-                reject();
-            }};
-        }}));
+        images[{i}] = new Image();
+        images[{i}].src = "{button['url']}";
     """
     js_code += f"""
-        Promise.all(promises).then(function() {{
-            changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
-        }}).catch(function() {{
-            console.error('Failed to preload images');
-        }});
+        changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
 
         new QWebChannel(qt.webChannelTransport, function(channel) {{
             window.pyObj = channel.objects.pyObj;
         }});
-
     }};
     """
 

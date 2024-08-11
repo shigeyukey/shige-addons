@@ -243,934 +243,254 @@
             // };
 
             
-
-    window.onerror = function(message, source, lineno, colno, error) {
-        // すべてのエラーを無視する
-        return true;
-    };
-
-    console.error = function() {
-        // すべてのエラーメッセージを無視する
-    };
-
-    console.warn = function() {
-        // すべての警告メッセージを無視する
-    };
-
-    console.log = function() {
-        // すべてのログメッセージを無視する
-    };
-
-    // qt が未定義の場合の対策
-    if (typeof qt === 'undefined') {
-        var qt = {};
-        qt.webChannelTransport = {};
-    }
-
-    // Permissions-Policy ヘッダーのエラーを無視する
-    document.addEventListener('securitypolicyviolation', function(e) {
-        if (e.violatedDirective === 'Permissions-Policy') {
-            return true;
-        }
-    });
-
-
-
-
     window.onload = function() {
         var images = [];
-        var promises = [];
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[0] = new Image();
-            images[0].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp";
-            images[0].onload = function() {
-                resolve();
-            };
-            images[0].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[1] = new Image();
-            images[1].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon(01).webp";
-            images[1].onload = function() {
-                resolve();
-            };
-            images[1].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[2] = new Image();
-            images[2].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_new_cards_farm.webp";
-            images[2].onload = function() {
-                resolve();
-            };
-            images[2].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[3] = new Image();
-            images[3].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/new_card_heatmap.webp";
-            images[3].onload = function() {
-                resolve();
-            };
-            images[3].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[4] = new Image();
-            images[4].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon-dinotimer.webp";
-            images[4].onload = function() {
-                resolve();
-            };
-            images[4].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[5] = new Image();
-            images[5].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_pomotimer.webp";
-            images[5].onload = function() {
-                resolve();
-            };
-            images[5].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[6] = new Image();
-            images[6].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_AnkiKnights%20and%20Dragons.webp";
-            images[6].onload = function() {
-                resolve();
-            };
-            images[6].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[7] = new Image();
-            images[7].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_little_Ankimare.webp";
-            images[7].onload = function() {
-                resolve();
-            };
-            images[7].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[8] = new Image();
-            images[8].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_study_with_Zombie.webp";
-            images[8].onload = function() {
-                resolve();
-            };
-            images[8].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[9] = new Image();
-            images[9].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_Resident_Anki.webp";
-            images[9].onload = function() {
-                resolve();
-            };
-            images[9].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[10] = new Image();
-            images[10].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Doomanki.webp";
-            images[10].onload = function() {
-                resolve();
-            };
-            images[10].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[11] = new Image();
-            images[11].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_meowknight.webp";
-            images[11].onload = function() {
-                resolve();
-            };
-            images[11].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[12] = new Image();
-            images[12].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_cats.webp";
-            images[12].onload = function() {
-                resolve();
-            };
-            images[12].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[13] = new Image();
-            images[13].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/top_toolbar_icons.webp";
-            images[13].onload = function() {
-                resolve();
-            };
-            images[13].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[14] = new Image();
-            images[14].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_mozartanki.webp";
-            images[14].onload = function() {
-                resolve();
-            };
-            images[14].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[15] = new Image();
-            images[15].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_CatGirlandSushi.webp";
-            images[15].onload = function() {
-                resolve();
-            };
-            images[15].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[16] = new Image();
-            images[16].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_redwitch_darkwitch.webp";
-            images[16].onload = function() {
-                resolve();
-            };
-            images[16].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[17] = new Image();
-            images[17].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/just_do_it_timer.webp";
-            images[17].onload = function() {
-                resolve();
-            };
-            images[17].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[18] = new Image();
-            images[18].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_terminator.webp";
-            images[18].onload = function() {
-                resolve();
-            };
-            images[18].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[19] = new Image();
-            images[19].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_v-ankipad.webp";
-            images[19].onload = function() {
-                resolve();
-            };
-            images[19].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[20] = new Image();
-            images[20].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_ambient.webp";
-            images[20].onload = function() {
-                resolve();
-            };
-            images[20].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[21] = new Image();
-            images[21].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_zenmode.webp";
-            images[21].onload = function() {
-                resolve();
-            };
-            images[21].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[22] = new Image();
-            images[22].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Anki_Leader_bord.webp";
-            images[22].onload = function() {
-                resolve();
-            };
-            images[22].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[23] = new Image();
-            images[23].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/anki_kill_streaks.webp";
-            images[23].onload = function() {
-                resolve();
-            };
-            images[23].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[24] = new Image();
-            images[24].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Animated_coins.webp";
-            images[24].onload = function() {
-                resolve();
-            };
-            images[24].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[25] = new Image();
-            images[25].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/progress_bar.webp";
-            images[25].onload = function() {
-                resolve();
-            };
-            images[25].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[26] = new Image();
-            images[26].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_progress_bar_for_Anki_how_to_use.webp";
-            images[26].onload = function() {
-                resolve();
-            };
-            images[26].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[27] = new Image();
-            images[27].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/pokemanki.webp";
-            images[27].onload = function() {
-                resolve();
-            };
-            images[27].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[28] = new Image();
-            images[28].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/AnkiTerminator_Thumbnail.webp";
-            images[28].onload = function() {
-                resolve();
-            };
-            images[28].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[29] = new Image();
-            images[29].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/NoDistractionsFullScreen.webp";
-            images[29].onload = function() {
-                resolve();
-            };
-            images[29].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[30] = new Image();
-            images[30].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AlwaysOnTop.webp";
-            images[30].onload = function() {
-                resolve();
-            };
-            images[30].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[31] = new Image();
-            images[31].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/zoom24.webp";
-            images[31].onload = function() {
-                resolve();
-            };
-            images[31].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[32] = new Image();
-            images[32].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiRedesign.webp";
-            images[32].onload = function() {
-                resolve();
-            };
-            images[32].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[33] = new Image();
-            images[33].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/break_timer.webp";
-            images[33].onload = function() {
-                resolve();
-            };
-            images[33].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[34] = new Image();
-            images[34].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/todayAgainCount.webp";
-            images[34].onload = function() {
-                resolve();
-            };
-            images[34].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[35] = new Image();
-            images[35].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_ankiRestart.webp";
-            images[35].onload = function() {
-                resolve();
-            };
-            images[35].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[36] = new Image();
-            images[36].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/tidyankibear.webp";
-            images[36].onload = function() {
-                resolve();
-            };
-            images[36].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[37] = new Image();
-            images[37].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Rearrange_home_addons.webp";
-            images[37].onload = function() {
-                resolve();
-            };
-            images[37].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[38] = new Image();
-            images[38].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/EaseScouter_thumbnail.webp";
-            images[38].onload = function() {
-                resolve();
-            };
-            images[38].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[39] = new Image();
-            images[39].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/An_Ki_Oh_thumbnail.webp";
-            images[39].onload = function() {
-                resolve();
-            };
-            images[39].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[40] = new Image();
-            images[40].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Bulk_Image_Downloader.webp";
-            images[40].onload = function() {
-                resolve();
-            };
-            images[40].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[41] = new Image();
-            images[41].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Editor_Auto_Show.webp";
-            images[41].onload = function() {
-                resolve();
-            };
-            images[41].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[42] = new Image();
-            images[42].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/DiscordSidebar.webp";
-            images[42].onload = function() {
-                resolve();
-            };
-            images[42].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[43] = new Image();
-            images[43].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AutoHighlight.webp";
-            images[43].onload = function() {
-                resolve();
-            };
-            images[43].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[44] = new Image();
-            images[44].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/GraphView.webp";
-            images[44].onload = function() {
-                resolve();
-            };
-            images[44].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[45] = new Image();
-            images[45].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/PreviewSlideshow.webp";
-            images[45].onload = function() {
-                resolve();
-            };
-            images[45].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[46] = new Image();
-            images[46].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/RandomSprite.webp";
-            images[46].onload = function() {
-                resolve();
-            };
-            images[46].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[47] = new Image();
-            images[47].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiIPA.webp";
-            images[47].onload = function() {
-                resolve();
-            };
-            images[47].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[48] = new Image();
-            images[48].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiOCR.webp";
-            images[48].onload = function() {
-                resolve();
-            };
-            images[48].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[49] = new Image();
-            images[49].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/PasteOCR.webp";
-            images[49].onload = function() {
-                resolve();
-            };
-            images[49].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[50] = new Image();
-            images[50].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/BrowserExternalEditor.webp";
-            images[50].onload = function() {
-                resolve();
-            };
-            images[50].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[51] = new Image();
-            images[51].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiConnectDowngrader.webp";
-            images[51].onload = function() {
-                resolve();
-            };
-            images[51].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[52] = new Image();
-            images[52].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnkiPet.webp";
-            images[52].onload = function() {
-                resolve();
-            };
-            images[52].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[53] = new Image();
-            images[53].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnniesCatEmporium.webp";
-            images[53].onload = function() {
-                resolve();
-            };
-            images[53].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[54] = new Image();
-            images[54].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnswerFeedback.webp";
-            images[54].onload = function() {
-                resolve();
-            };
-            images[54].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[55] = new Image();
-            images[55].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/Beeline.webp";
-            images[55].onload = function() {
-                resolve();
-            };
-            images[55].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[56] = new Image();
-            images[56].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/CopyNotes.webp";
-            images[56].onload = function() {
-                resolve();
-            };
-            images[56].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[57] = new Image();
-            images[57].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/googleDictionary.webp";
-            images[57].onload = function() {
-                resolve();
-            };
-            images[57].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[58] = new Image();
-            images[58].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AddNotesID.webp";
-            images[58].onload = function() {
-                resolve();
-            };
-            images[58].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[59] = new Image();
-            images[59].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/MultiDeckInporter.webp";
-            images[59].onload = function() {
-                resolve();
-            };
-            images[59].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[60] = new Image();
-            images[60].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/LeechToolKit.webp";
-            images[60].onload = function() {
-                resolve();
-            };
-            images[60].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[61] = new Image();
-            images[61].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/Dict2Anki.webp";
-            images[61].onload = function() {
-                resolve();
-            };
-            images[61].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[62] = new Image();
-            images[62].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/NoSpaceDash.webp";
-            images[62].onload = function() {
-                resolve();
-            };
-            images[62].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[63] = new Image();
-            images[63].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/RemoveTooltip.webp";
-            images[63].onload = function() {
-                resolve();
-            };
-            images[63].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[64] = new Image();
-            images[64].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/RenderedBrowser.webp";
-            images[64].onload = function() {
-                resolve();
-            };
-            images[64].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[65] = new Image();
-            images[65].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/reset%20card%20scheduring.webp";
-            images[65].onload = function() {
-                resolve();
-            };
-            images[65].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[66] = new Image();
-            images[66].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/ReviewHighlighter.webp";
-            images[66].onload = function() {
-                resolve();
-            };
-            images[66].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[67] = new Image();
-            images[67].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/SimpleTimer.webp";
-            images[67].onload = function() {
-                resolve();
-            };
-            images[67].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[68] = new Image();
-            images[68].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/Syllabus.webp";
-            images[68].onload = function() {
-                resolve();
-            };
-            images[68].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[69] = new Image();
-            images[69].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/SyncToObsidian.webp";
-            images[69].onload = function() {
-                resolve();
-            };
-            images[69].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[70] = new Image();
-            images[70].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/TagStatistics.webp";
-            images[70].onload = function() {
-                resolve();
-            };
-            images[70].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[71] = new Image();
-            images[71].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/TemplatesImportAndExport.webp";
-            images[71].onload = function() {
-                resolve();
-            };
-            images[71].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[72] = new Image();
-            images[72].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/MathDelimitersReplacer.webp";
-            images[72].onload = function() {
-                resolve();
-            };
-            images[72].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[73] = new Image();
-            images[73].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/TriggerAndActions.webp";
-            images[73].onload = function() {
-                resolve();
-            };
-            images[73].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[74] = new Image();
-            images[74].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AddMediaEasy.webp";
-            images[74].onload = function() {
-                resolve();
-            };
-            images[74].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[75] = new Image();
-            images[75].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AutoEaseFactor.webp";
-            images[75].onload = function() {
-                resolve();
-            };
-            images[75].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[76] = new Image();
-            images[76].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/HistoryRecorder.webp";
-            images[76].onload = function() {
-                resolve();
-            };
-            images[76].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[77] = new Image();
-            images[77].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/ScrollinReviewer.webp";
-            images[77].onload = function() {
-                resolve();
-            };
-            images[77].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[78] = new Image();
-            images[78].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/ReadableAddonsFolder.webp";
-            images[78].onload = function() {
-                resolve();
-            };
-            images[78].onerror = function() {
-                reject();
-            };
-        }));
-    
-        promises.push(new Promise(function(resolve, reject) {
-            images[79] = new Image();
-            images[79].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_simple_fix.webp";
-            images[79].onload = function() {
-                resolve();
-            };
-            images[79].onerror = function() {
-                reject();
-            };
-        }));
-    
-        Promise.all(promises).then(function() {
-            changeImage("https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp", "(Patron) multiple mini games, progress bar, pomodoro timer, and more.", "https://youtu.be/t50NZagCsYk", "⚔️AnkiArcade Medley", 0);
-        }).catch(function() {
-            console.error('Failed to preload images');
-        });
+    
+        images[0] = new Image();
+        images[0].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp";
+    
+        images[1] = new Image();
+        images[1].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon(01).webp";
+    
+        images[2] = new Image();
+        images[2].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_new_cards_farm.webp";
+    
+        images[3] = new Image();
+        images[3].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/new_card_heatmap.webp";
+    
+        images[4] = new Image();
+        images[4].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon-dinotimer.webp";
+    
+        images[5] = new Image();
+        images[5].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_pomotimer.webp";
+    
+        images[6] = new Image();
+        images[6].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_AnkiKnights%20and%20Dragons.webp";
+    
+        images[7] = new Image();
+        images[7].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_little_Ankimare.webp";
+    
+        images[8] = new Image();
+        images[8].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_study_with_Zombie.webp";
+    
+        images[9] = new Image();
+        images[9].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_Resident_Anki.webp";
+    
+        images[10] = new Image();
+        images[10].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Doomanki.webp";
+    
+        images[11] = new Image();
+        images[11].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_meowknight.webp";
+    
+        images[12] = new Image();
+        images[12].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_cats.webp";
+    
+        images[13] = new Image();
+        images[13].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/top_toolbar_icons.webp";
+    
+        images[14] = new Image();
+        images[14].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_mozartanki.webp";
+    
+        images[15] = new Image();
+        images[15].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_CatGirlandSushi.webp";
+    
+        images[16] = new Image();
+        images[16].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_redwitch_darkwitch.webp";
+    
+        images[17] = new Image();
+        images[17].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/just_do_it_timer.webp";
+    
+        images[18] = new Image();
+        images[18].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_terminator.webp";
+    
+        images[19] = new Image();
+        images[19].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_v-ankipad.webp";
+    
+        images[20] = new Image();
+        images[20].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_ambient.webp";
+    
+        images[21] = new Image();
+        images[21].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_zenmode.webp";
+    
+        images[22] = new Image();
+        images[22].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Anki_Leader_bord.webp";
+    
+        images[23] = new Image();
+        images[23].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/anki_kill_streaks.webp";
+    
+        images[24] = new Image();
+        images[24].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Animated_coins.webp";
+    
+        images[25] = new Image();
+        images[25].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/progress_bar.webp";
+    
+        images[26] = new Image();
+        images[26].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_progress_bar_for_Anki_how_to_use.webp";
+    
+        images[27] = new Image();
+        images[27].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/pokemanki.webp";
+    
+        images[28] = new Image();
+        images[28].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/AnkiTerminator_Thumbnail.webp";
+    
+        images[29] = new Image();
+        images[29].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/NoDistractionsFullScreen.webp";
+    
+        images[30] = new Image();
+        images[30].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AlwaysOnTop.webp";
+    
+        images[31] = new Image();
+        images[31].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/zoom24.webp";
+    
+        images[32] = new Image();
+        images[32].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiRedesign.webp";
+    
+        images[33] = new Image();
+        images[33].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/break_timer.webp";
+    
+        images[34] = new Image();
+        images[34].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/todayAgainCount.webp";
+    
+        images[35] = new Image();
+        images[35].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_ankiRestart.webp";
+    
+        images[36] = new Image();
+        images[36].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/tidyankibear.webp";
+    
+        images[37] = new Image();
+        images[37].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Rearrange_home_addons.webp";
+    
+        images[38] = new Image();
+        images[38].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/EaseScouter_thumbnail.webp";
+    
+        images[39] = new Image();
+        images[39].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/An_Ki_Oh_thumbnail.webp";
+    
+        images[40] = new Image();
+        images[40].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Bulk_Image_Downloader.webp";
+    
+        images[41] = new Image();
+        images[41].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Editor_Auto_Show.webp";
+    
+        images[42] = new Image();
+        images[42].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/DiscordSidebar.webp";
+    
+        images[43] = new Image();
+        images[43].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AutoHighlight.webp";
+    
+        images[44] = new Image();
+        images[44].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/GraphView.webp";
+    
+        images[45] = new Image();
+        images[45].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/PreviewSlideshow.webp";
+    
+        images[46] = new Image();
+        images[46].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/RandomSprite.webp";
+    
+        images[47] = new Image();
+        images[47].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiIPA.webp";
+    
+        images[48] = new Image();
+        images[48].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiOCR.webp";
+    
+        images[49] = new Image();
+        images[49].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/PasteOCR.webp";
+    
+        images[50] = new Image();
+        images[50].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/BrowserExternalEditor.webp";
+    
+        images[51] = new Image();
+        images[51].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiConnectDowngrader.webp";
+    
+        images[52] = new Image();
+        images[52].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnkiPet.webp";
+    
+        images[53] = new Image();
+        images[53].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnniesCatEmporium.webp";
+    
+        images[54] = new Image();
+        images[54].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnswerFeedback.webp";
+    
+        images[55] = new Image();
+        images[55].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/Beeline.webp";
+    
+        images[56] = new Image();
+        images[56].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/CopyNotes.webp";
+    
+        images[57] = new Image();
+        images[57].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/googleDictionary.webp";
+    
+        images[58] = new Image();
+        images[58].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AddNotesID.webp";
+    
+        images[59] = new Image();
+        images[59].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/MultiDeckInporter.webp";
+    
+        images[60] = new Image();
+        images[60].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/LeechToolKit.webp";
+    
+        images[61] = new Image();
+        images[61].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/Dict2Anki.webp";
+    
+        images[62] = new Image();
+        images[62].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/NoSpaceDash.webp";
+    
+        images[63] = new Image();
+        images[63].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/RemoveTooltip.webp";
+    
+        images[64] = new Image();
+        images[64].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/RenderedBrowser.webp";
+    
+        images[65] = new Image();
+        images[65].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/reset%20card%20scheduring.webp";
+    
+        images[66] = new Image();
+        images[66].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/ReviewHighlighter.webp";
+    
+        images[67] = new Image();
+        images[67].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/SimpleTimer.webp";
+    
+        images[68] = new Image();
+        images[68].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/Syllabus.webp";
+    
+        images[69] = new Image();
+        images[69].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/SyncToObsidian.webp";
+    
+        images[70] = new Image();
+        images[70].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/TagStatistics.webp";
+    
+        images[71] = new Image();
+        images[71].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/TemplatesImportAndExport.webp";
+    
+        images[72] = new Image();
+        images[72].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/MathDelimitersReplacer.webp";
+    
+        images[73] = new Image();
+        images[73].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/TriggerAndActions.webp";
+    
+        images[74] = new Image();
+        images[74].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AddMediaEasy.webp";
+    
+        images[75] = new Image();
+        images[75].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AutoEaseFactor.webp";
+    
+        images[76] = new Image();
+        images[76].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/HistoryRecorder.webp";
+    
+        images[77] = new Image();
+        images[77].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/ScrollinReviewer.webp";
+    
+        images[78] = new Image();
+        images[78].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/ReadableAddonsFolder.webp";
+    
+        images[79] = new Image();
+        images[79].src = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_simple_fix.webp";
+    
+        changeImage("https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp", "(Patron) multiple mini games, progress bar, pomodoro timer, and more.", "https://youtu.be/t50NZagCsYk", "⚔️AnkiArcade Medley", 0);
 
         new QWebChannel(qt.webChannelTransport, function(channel) {
             window.pyObj = channel.objects.pyObj;
         });
-
     };
     
 
