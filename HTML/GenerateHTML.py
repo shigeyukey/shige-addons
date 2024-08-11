@@ -35,6 +35,11 @@ def generate_html_content(buttons):
         }}).catch(function() {{
             console.error('Failed to preload images');
         }});
+
+        new QWebChannel(qt.webChannelTransport, function(channel) {{
+            window.pyObj = channel.objects.pyObj;
+        }});
+
     }};
     """
 
@@ -196,9 +201,9 @@ def generate_html_content(buttons):
                 console.log('Description link clicked');
             }});
 
-            new QWebChannel(qt.webChannelTransport, function(channel) {{
-                window.pyObj = channel.objects.pyObj;
-            }});
+            // new QWebChannel(qt.webChannelTransport, function(channel) {{
+            //     window.pyObj = channel.objects.pyObj;
+            // }});
 
             // window.onload = function() {{
             //     changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);

@@ -233,9 +233,9 @@
                 console.log('Description link clicked');
             });
 
-            new QWebChannel(qt.webChannelTransport, function(channel) {
-                window.pyObj = channel.objects.pyObj;
-            });
+            // new QWebChannel(qt.webChannelTransport, function(channel) {
+            //     window.pyObj = channel.objects.pyObj;
+            // });
 
             // window.onload = function() {
             //     changeImage("https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp", "(Patron) multiple mini games, progress bar, pomodoro timer, and more.", "https://youtu.be/t50NZagCsYk", "⚔️AnkiArcade Medley", 0);
@@ -1131,6 +1131,11 @@
         }).catch(function() {
             console.error('Failed to preload images');
         });
+
+        new QWebChannel(qt.webChannelTransport, function(channel) {
+            window.pyObj = channel.objects.pyObj;
+        });
+
     };
     
 
