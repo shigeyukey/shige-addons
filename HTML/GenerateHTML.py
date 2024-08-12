@@ -23,9 +23,6 @@ def generate_html_content(buttons):
     js_code += f"""
         changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
 
-        new QWebChannel(qt.webChannelTransport, function(channel) {{
-            window.pyObj = channel.objects.pyObj;
-        }});
     }};
     """
 
@@ -164,7 +161,6 @@ def generate_html_content(buttons):
                 </div>
             </div>
         </div>
-        <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
         <script>
 
             function hideLoading() {{
@@ -202,14 +198,6 @@ def generate_html_content(buttons):
             document.getElementById('description-link').addEventListener('click', function() {{
                 console.log('Description link clicked');
             }});
-
-            // new QWebChannel(qt.webChannelTransport, function(channel) {{
-            //     window.pyObj = channel.objects.pyObj;
-            // }});
-
-            // window.onload = function() {{
-            //     changeImage("{buttons[0]['url']}", "{buttons[0]['description']}", "{buttons[0]['link']}", "{buttons[0]['label']}", 0);
-            // }};
 
             {js_code}
 
@@ -594,7 +582,7 @@ buttons = [
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnkiPet.webp",
-    "label": "🐤AnkiPet (Fixed,Free)",
+    "label": "🐤AnkiPet",
     "description": "(Free, Fixed) gamify your learning by caring for a pet ",
     "link": "https://ankiweb.net/shared/info/2026040256"},
 

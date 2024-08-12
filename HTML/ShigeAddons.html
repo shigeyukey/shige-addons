@@ -178,7 +178,7 @@
 <button id="button-49"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/PasteOCR.webp',                '(Free, Fixed) Paste image as text.',                    'https://ankiweb.net/shared/info/1808435406',                        '📸PasteOCR',                    49)">📸PasteOCR</button>
 <button id="button-50"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/BrowserExternalEditor.webp',                '(Free, Fixed) open separate window',                    'https://ankiweb.net/shared/info/1284875472',                        '📝Browser external editor',                    50)">📝Browser external editor</button>
 <button id="button-51"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AnkiConnectDowngrader.webp',                '(Free, Fixed) for downgrading Anki Connect.',                    'https://ankiweb.net/shared/info/1485099361',                        '🔙Anki Connect Downgrader',                    51)">🔙Anki Connect Downgrader</button>
-<button id="button-52"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnkiPet.webp',                '(Free, Fixed) gamify your learning by caring for a pet ',                    'https://ankiweb.net/shared/info/2026040256',                        '🐤AnkiPet (Fixed,Free)',                    52)">🐤AnkiPet (Fixed,Free)</button>
+<button id="button-52"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnkiPet.webp',                '(Free, Fixed) gamify your learning by caring for a pet ',                    'https://ankiweb.net/shared/info/2026040256',                        '🐤AnkiPet',                    52)">🐤AnkiPet</button>
 <button id="button-53"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnniesCatEmporium.webp',                '(Free, Fixed) For every UWorld block completed, the plug-in will give the user one cat.',                    'https://ankiweb.net/shared/info/741979554',                        '🐈️Annies Cat Emporium',                    53)">🐈️Annies Cat Emporium</button>
 <button id="button-54"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/AnswerFeedback.webp',                '(Free, Custom) Answer feedback, same as Ankimote.',                    'https://ankiweb.net/shared/info/724185003',                        '🎮️Answer feedback',                    54)">🎮️Answer feedback</button>
 <button id="button-55"            onclick="changeImage(                'https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails03/Beeline.webp',                '(Free, Fixed) Color gradients for better Reading Focus',                    'https://ankiweb.net/shared/info/122706731',                        '🐝BeeLine',                    55)">🐝BeeLine</button>
@@ -210,7 +210,6 @@
                 </div>
             </div>
         </div>
-        <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
         <script>
 
             function hideLoading() {
@@ -248,14 +247,6 @@
             document.getElementById('description-link').addEventListener('click', function() {
                 console.log('Description link clicked');
             });
-
-            // new QWebChannel(qt.webChannelTransport, function(channel) {
-            //     window.pyObj = channel.objects.pyObj;
-            // });
-
-            // window.onload = function() {
-            //     changeImage("https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp", "(Patron) multiple mini games, progress bar, pomodoro timer, and more.", "https://youtu.be/t50NZagCsYk", "⚔️AnkiArcade Medley", 0);
-            // };
 
             
     window.onload = function() {
@@ -503,9 +494,6 @@
     
         changeImage("https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp", "(Patron) multiple mini games, progress bar, pomodoro timer, and more.", "https://youtu.be/t50NZagCsYk", "⚔️AnkiArcade Medley", 0);
 
-        new QWebChannel(qt.webChannelTransport, function(channel) {
-            window.pyObj = channel.objects.pyObj;
-        });
     };
     
 
