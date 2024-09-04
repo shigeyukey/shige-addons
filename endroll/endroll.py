@@ -15,6 +15,13 @@ class CustomWebEnginePage(QWebEnginePage):
         new_page = CustomWebEnginePage(self)
         new_page.urlChanged.connect(handle_new_window)
         return new_page
+
+    def acceptNavigationRequest(self, url, _type, isMainFrame):
+        if _type == QWebEnginePage.NavigationType.NavigationTypeLinkClicked:
+            openLink(url.toString())
+            return False
+        return True
+
     def javaScriptConsoleMessage(self, level, message, lineNumber, sourceID):
         pass
 
@@ -110,6 +117,7 @@ class EndrollWidget(QWidget):
         self.web_view.setHtml(html_content, baseUrl=QUrl.fromLocalFile(addon_path + '/'))
         self.web_view.settings().setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessFileUrls, True)
         self.web_view.settings().setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessRemoteUrls, True)
+        self.web_view.settings().setAttribute(QWebEngineSettings.WebAttribute.JavascriptEnabled, True)
 
 
         layout = QVBoxLayout(self)
