@@ -1,14 +1,5 @@
 import os
 
-
-
-HTML_FILE_NAME = 'ShigeAddons.html'
-# HTML_FILE_NAME = 'ShigeAddons_test.html'
-
-
-
-
-
 def generate_html_content(buttons):
     button_html = ""
     for i, button in enumerate(buttons):
@@ -270,62 +261,62 @@ buttons = [
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp",
     "label": "⚔️AnkiArcade Medley",
     "description": "(Patron) multiple mini games, progress bar, pomodoro timer, and more.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/Home.html"},
+    "link": "https://youtu.be/t50NZagCsYk"},
 
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon(01).webp",
     "label": "🌱New Cards Farm 2",
     "description": "(Patron) You can grow crops and flowers with the new cards you have learned.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-02.html"},
+    "link": "https://youtu.be/6NO7uEgKRbQ"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_new_cards_farm.webp",
     "label": "🌱New Cards Farm",
     "description": "(Patron) You can grow crops and flowers with the new cards you have learned.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-01.html"},
+    "link": "https://youtu.be/J_5MUjeBEkA"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/new_card_heatmap.webp",
     "label": "📅New Card Heatmap",
     "description": "(Patron) Show calendar and streaks of New cards learned, like the review heatmap.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-heatmap.html"},
+    "link": "https://www.patreon.com/posts/how-to-use-new-0-102591888?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon-dinotimer.webp",
     "label": "🦖Dinotimer",
     "description": "(Patron) DinoTimer - Raising Dinosaurs with Pomodoro Study.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/dino-timer.html"},
+    "link": "https://youtu.be/LO76BX6RBmE"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_pomotimer.webp",
     "label": "🍅Pomotimer",
     "description": "(Patron) Circular progress bar with transparent background.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/pomotimer.html"},
+    "link": "https://youtu.be/nPQdhgB_vH8"},
 
 
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_AnkiKnights%20and%20Dragons.webp",
     "label": "⚔️AnkiKnights and Dragons",
     "description": "(Patron) The knights fight many monsters.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/01-anki-knights--doragons.html"},
+    "link": "https://youtu.be/wYUzx3xKqq8"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_little_Ankimare.webp",
     "label": "💎Little Ankimare",
     "description": "(Patron) The hooded protagonist explores a mysterious cave in search of gemstones.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/02-little-ankimares.html"},
+    "link": "https://youtu.be/YvsdcOj6uxA"},
 
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_study_with_Zombie.webp",
     "label": "🧟Study with Zombie",
     "description": "(Patron) Improved version of Doomanki, zombie emerges.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/05-study-with-zombie.html"},
+    "link": "https://youtu.be/twJ6PRkbEUE"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_Resident_Anki.webp",
     "label": "🧟Resident Anki",
     "description": "(Patron) Shooting Game with Mini Zombies.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/06-resident-anki.html"},
+    "link": "https://youtu.be/OARrRkRskeo"},
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Doomanki.webp",
     "label": "🔫Doomanki",
     "description": "(Patron) Anki addon like FPS game. When you answer, gun animations, gunshot sounds, explosions.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/doomanki.html"},
+    "link": "https://youtu.be/e3vOxR9WGKY"},
 
 
     # {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Mozartanki.webp",
@@ -337,52 +328,52 @@ buttons = [
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_meowknight.webp",
     "label": "🐱Meowknight",
     "description": "(Patron) Cat knight fighting theme.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/13-meowknight.html"},
+    "link": "https://youtu.be/Li4-lM8G7QM"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_cats.webp",
     "label": "🐱Cat Gathering in Anki",
     "description": "(Patron) Cats walking and running around.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/07-%EF%B8%8Fcat-gathering-in-anki.html"},
+    "link": "https://youtu.be/0FjSCkGsmIU"},
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/top_toolbar_icons.webp",
     "label": "🎨Top toolbar icons",
     "description": "(Patron) Decks Add-Browse-Stats-Sync",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/top-toolbar-icons.html"},
+    "link": "https://www.patreon.com/posts/102519235"},
 
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_mozartanki.webp",
     "label": "🎵Mozartanki",
     "description": "(Patron) MIDI music player with 328 classical music tracks.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/11-mozartanki.html"},
+    "link": "https://youtu.be/Joo2Psc5DaE"},
 
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_CatGirlandSushi.webp",
     "label": "🐱Cat Girl and Sushi",
     "description": "(Patron) Cute CatGirl eats a lot of Sushi.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/03-catgirl--sushi.html"},
+    "link": "https://youtu.be/oX0IClAFTxA"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_redwitch_darkwitch.webp",
     "label": "🧙Redwitch Darkwitch",
     "description": "(Patron) Wizard transforms",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/14-redwitch.html"},
+    "link": "https://youtu.be/beS1P40-FJ4"},
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/just_do_it_timer.webp",
     "label": "🔥Just Do Anki timer",
     "description": "(Patron) Pomodoro timer with voice and animation that shouts JustDoIt when the time is up.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/just-anki-timer.html"},
+    "link": "https://youtu.be/ggi2_goRFoU"},
 
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_terminator.webp",
     "label": "🤖AnkiTerminator SR-800",
     "description": "(Patron) Cute mascot character for Ankis reviews.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/09-ankiterminator-sr-800.html"},
+    "link": "https://youtu.be/XNijnd-0MsA"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_v-ankipad.webp",
     "label": "🎮Virtual Ankipad",
     "description": "(Patron) Review screens will show answer buttons like the gamepad.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/10-virtual-ankipad.html"},
+    "link": "https://youtu.be/-wnvkWz8GHg"},
 
     # {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/banner_virtual_ankipad.webp",
     # "label": "🎮Virtual Ankipad",
@@ -403,12 +394,12 @@ buttons = [
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_ambient.webp",
     "label": "⭐Ambient",
     "description": "(Patron) Ambient sounds such as bonfires and rainfall are played instead of music.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/04-ambiebt-music.html"},
+    "link": "https://youtu.be/J5Jd0aM-8BI"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_zenmode.webp",
     "label": "🧘‍♀Zenmode",
     "description": "(Patron) Turns off all animation, progress bar, and music.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/08-%EF%B8%8Fzen-mode.html"},
+    "link": "https://youtu.be/05s_fEXp9fI"},
 
     # FREE add-ons
 
@@ -416,47 +407,47 @@ buttons = [
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Anki_Leader_bord.webp",
     "label": "🏆Anki Leaderboard",
     "description": "(Free, Custom) Compete with friends to boost motivation",
-    "link": "https://ankiweb.net/shared/info/175794613"},#🟢
+    "link": "https://ankiweb.net/shared/info/175794613"},
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/anki_kill_streaks.webp",
     "label": "🎖️Anki Killstreaks",
     "description": "(Free, Fixed) Reward Medals for Correct Answers",
-    "link": "https://ankiweb.net/shared/info/1562475180"},#🟢
+    "link": "https://ankiweb.net/shared/info/1562475180"},
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Animated_coins.webp",
     "label": "🎖️Animation coins",
     "description": "(Patron) You can add animated coins to the Anki killstreaks.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/additional-animation-coins.html"},
+    "link": "https://www.patreon.com/posts/how-to-use-anki-99615150?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"},
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/progress_bar.webp",
     "label": "⌛️Progress bar",
     "description": "(Free, Custom) Visualize reviewed cards and remaining",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/progress-bar.html"},
+    "link": "https://ankiweb.net/shared/info/1708250053"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_progress_bar_for_Anki_how_to_use.webp",
     "label": "⌛️Progress Bar for Anki",
     "description": "(Patron) Progress bars for chunking Anki cards.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/progress-bar-for-anki.html"},
+    "link": "https://youtu.be/x8M1jAs4dpk"},
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/pokemanki.webp",
     "label": "🎮️Pokemanki Gold",
     "description": "(Free, Custom) Raising Pokemon with Anki.",
-    "link": "https://ankiweb.net/shared/info/1677779223"},#🟢
+    "link": "https://ankiweb.net/shared/info/1677779223"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/AnkiTerminator_Thumbnail.webp",
     "label": "🤖AnkiTerminator-AI",
     "description": "(Free, Original) ChatGPT Sidebar for Review, GoogleBard, BingChat",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiTerminator/anki_terminator_00.html"},
+    "link": "https://youtu.be/rLXM63Jc8ng"},
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/NoDistractionsFullScreen.webp",
     "label": "🖥️No Distractions Full Screen",
     "description": "(Free, Fixed) Hides all the distractions such as menu bars, etc., there are cool answer buttons.",
-    "link": "https://ankiweb.net/shared/info/1370336700"},#🟢
+    "link": "https://ankiweb.net/shared/info/1370336700"},
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/AlwaysOnTop.webp",
@@ -481,19 +472,19 @@ buttons = [
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/break_timer.webp",
     "label": "☕Break Timer",
     "description": "(Free, Original) After 10 cards, take a 3 minute break",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/break-timer.html"},
+    "link": "https://ankiweb.net/shared/info/174058935"},
 
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/todayAgainCount.webp",
     "label": "🎮Today Again Count",
     "description": "(Free, Original) Display todays Again count in menu bar for each card",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/today-again-count.html"},
+    "link": "https://ankiweb.net/shared/info/50293437"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_ankiRestart.webp",
     "label": "🔂AnkiRestart",
     "description": "(Free, Original) just adds a reboot button to the menu bar.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/ankirestart.html"},
+    "link": "https://youtu.be/q8c_POBOcMg"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/tidyankibear.webp",
     "label": "🐻Tidyankibear",
@@ -510,12 +501,12 @@ buttons = [
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/EaseScouter_thumbnail.webp",
     "label": "👓️EaseScouter",
     "description": "(Patron) Visual feedback on Ease, Answer and Interval with multilingual text. ",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/easescouter.html"},
+    "link": "https://youtu.be/rB9JgY0JHHQ"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/An_Ki_Oh_thumbnail.webp",
     "label": "🃏An-ki-oh!",
     "description": "(Patron) Anki card templates like a monster card game.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/an-ki-oh.html"},
+    "link": "https://youtu.be/7F0uWskPwyc"},
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Bulk_Image_Downloader.webp",
@@ -780,9 +771,8 @@ buttons = [
 HTML_CONTENT = generate_html_content(buttons)
 
 
-
 # 指定されたﾊﾟｽ
-file_path = f'G:/among anki/_00_Github/Shige-Addons/shige-addons/HTML/{HTML_FILE_NAME}'
+file_path = r'G:/among anki/_00_Github/Shige-Addons/shige-addons/HTML/ShigeAddons.html'
 
 os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
