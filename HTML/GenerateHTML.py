@@ -416,7 +416,7 @@ buttons = [
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Anki_Leader_bord.webp",
     "label": "🏆Anki Leaderboard",
     "description": "(Free, Custom) Compete with friends to boost motivation",
-    "link": "https://ankiweb.net/shared/info/175794613"},#🟢
+    "link": "https://shigeyukey.github.io/shige-addons-wiki/anki-leaderboard.html"},
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/anki_kill_streaks.webp",
