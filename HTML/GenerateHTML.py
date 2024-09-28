@@ -445,7 +445,7 @@ buttons = [
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/pokemanki.webp",
     "label": "🎮️Pokemanki Gold",
     "description": "(Free, Custom) Raising Pokemon with Anki.",
-    "link": "https://ankiweb.net/shared/info/1677779223"},#🟢
+    "link": "https://shigeyukey.github.io/shige-addons-wiki/pokemanki-gold.html"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/AnkiTerminator_Thumbnail.webp",
     "label": "🤖AnkiTerminator-AI",
@@ -540,6 +540,48 @@ buttons = [
     "label": "🖌️Auto Highlight Cloze in Browser",
     "description": "(Free, Custom) auto Highlight Cloze of selected card in Browser.",
     "link": "https://ankiweb.net/shared/info/210078606"},
+
+    # others
+    
+    {
+    "url": "https://shigeyukey.github.io/shige-addons-wiki/images/Enhanced%20Main%20Window/enhance_main.png",#🟢
+    "label": "📊Enhance main window",
+    "description": "(Free, Custom) Adds a lot of features to the main window.",
+    "link": "https://shigeyukey.github.io/shige-addons-wiki/enhance-main-window.html"},
+    
+    {
+    "url": "",
+    "label": "📊Stats Plus",
+    "description": "(Free, Custom) Stats Plus allows you to include the Anki graphs inside of other screens.",
+    "link": "https://ankiweb.net/shared/info/146032826"},
+
+
+    {
+    "url": "",#🟢
+    "label": "⏩️Skip Anki home and deck overview ",
+    "description": "(Free, Custom) Skip deck overview and go directly to the reviewer.",
+    "link": "https://ankiweb.net/shared/info/295525470"},
+
+    {
+    "url": "",#🟢
+    "label": "🌶️Hanseido",
+    "description": "(Free, Custom) Korean Definitions",
+    "link": "https://ankiweb.net/shared/info/286402228"},
+
+    {
+    "url": "",#🟢
+    "label": "🛡️Enable HTTPS",
+    "description": "(Free, Reuploaded) interception with foreign SSL certificates",
+    "link": "https://ankiweb.net/shared/info/1332261690"},
+
+
+
+    # {
+    # "url": "🟢",
+    # "label": "🟢",
+    # "description": "🟢",
+    # "link": "🟢"},
+
 
     {
     "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/GraphView.webp",
