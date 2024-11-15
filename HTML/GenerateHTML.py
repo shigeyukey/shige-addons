@@ -437,7 +437,7 @@ buttons = [
     "link": "https://shigeyukey.github.io/shige-addons-wiki/progress-bar.html"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_progress_bar_for_Anki_how_to_use.webp",
-    "label": "⌛️Progress Bar for Anki",
+    "label": "⌛️Chunk Progressbar",
     "description": "(Patron) Progress bars for chunking Anki cards.",
     "link": "https://shigeyukey.github.io/shige-addons-wiki/progress-bar-for-anki.html"},
 
