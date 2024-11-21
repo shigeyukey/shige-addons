@@ -149,6 +149,21 @@ def generate_html_content(buttons):
                 cursor: pointer;
                 font-size: 24px;
             }}
+
+            ::-webkit-scrollbar {{
+                width: 16px;
+            }}
+            ::-webkit-scrollbar-track {{
+                background-color: #333333;
+                background-size: 128px 128px;
+            }}
+            ::-webkit-scrollbar-thumb {{
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 10px;
+                border: 3px solid transparent;
+                background-clip: content-box;
+            }}
+
         </style>
     </head>
     <body>
