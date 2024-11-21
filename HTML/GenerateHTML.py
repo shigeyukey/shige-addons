@@ -50,6 +50,8 @@ def generate_html_content(buttons):
                 padding: 0;
                 box-sizing: border-box;
                 font-family: 'Arial', sans-serif;
+                background-color: #222222;
+                color: #ffffff;
             }}
             .wrapper {{
                 display: block;
@@ -66,6 +68,7 @@ def generate_html_content(buttons):
                 display: block;
                 max-width: 100%;
                 max-height: 80%;
+                color: #1e90ff;
             }}
 
             a:hover {{
@@ -109,6 +112,9 @@ def generate_html_content(buttons):
                 margin: 2px;
                 padding: 5px 10px;
                 font-size: 12px;
+                background-color: #333333;
+                color: #ffffff;
+                border-radius: 10px;
             }}
             #loading {{
                 font-size: 20px;
