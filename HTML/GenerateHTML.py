@@ -287,6 +287,13 @@ def generate_html_content(buttons):
 
 buttons = [
 
+    {
+    "url": "🟢",
+    "label": "⚔️AnkiArcade v1.8.5 update info",
+    "description": "(Patron) multiple mini games, progress bar, pomodoro timer, and more.",
+    "link": "https://youtu.be/DVr3pEDn3EM"},
+
+
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp",
     "label": "⚔️AnkiArcade Medley",
