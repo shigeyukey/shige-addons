@@ -7,8 +7,6 @@ HTML_FILE_NAME = 'ShigeAddons.html'
 
 
 
-
-
 def generate_html_content(buttons):
     button_html = ""
     for i, button in enumerate(buttons):
@@ -288,11 +286,21 @@ def generate_html_content(buttons):
 buttons = [
 
     {
-    "url": "🟢",
+    "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/refs/heads/main/addons_media/thumbnails04/AnkiArcadev1.8.5.webp",
     "label": "⚔️AnkiArcade v1.8.5 update info",
     "description": "(Patron) multiple mini games, progress bar, pomodoro timer, and more.",
     "link": "https://youtu.be/DVr3pEDn3EM"},
 
+    {
+    "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/refs/heads/main/addons_media/thumbnails04/LeadarboardPlus.webp",
+    "label": "🎖️Anki Leaderboard Plus",
+    "description": "(Patreon) Real time sync of the Anki Leaderbord during review",
+    "link": "https://shigeyukey.github.io/shige-addons-wiki/Anki-Leaderboard-Plus.html"},
+
+    {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon(01).webp",
+    "label": "🌱New Cards Farm 2",
+    "description": "(Patron) You can grow crops and flowers with the new cards you have learned.",
+    "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-02.html"},
 
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp",
@@ -300,11 +308,6 @@ buttons = [
     "description": "(Patron) multiple mini games, progress bar, pomodoro timer, and more.",
     "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/Home.html"},
 
-
-    {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon(01).webp",
-    "label": "🌱New Cards Farm 2",
-    "description": "(Patron) You can grow crops and flowers with the new cards you have learned.",
-    "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-02.html"},
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_new_cards_farm.webp",
     "label": "🌱New Cards Farm",
