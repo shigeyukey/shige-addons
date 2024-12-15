@@ -346,7 +346,7 @@ buttons = [
     "link": "https://shigeyukey.github.io/shige-addons-wiki/easescouter.html"},
 
     {
-    "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Animated_coins.webp",
+    "url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Animated_coins_02.webp",
     "label": "🎖️Animation coins",
     "description": "(Patron) You can add animated coins to the Anki killstreaks.",
     "link": "https://shigeyukey.github.io/shige-addons-wiki/additional-animation-coins.html"},
