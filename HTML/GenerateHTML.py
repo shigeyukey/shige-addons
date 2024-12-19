@@ -285,6 +285,12 @@ def generate_html_content(buttons):
 
 buttons = [
 
+
+    {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/refs/heads/main/addons_media/thumbnails04/00_animation.webp",
+    "label": "Patreon only addons",
+    "description": "Support my work on Patreon ($5/month) for access to Patrons-only add-ons!",
+    "link": "https://shigeyukey.github.io/shige-addons-wiki/patrons_q_and_a.html"},
+
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon(01).webp",
     "label": "🌱New Cards Farm 2",
     "description": "(Patron) You can grow crops and flowers with the new cards you have learned.",
