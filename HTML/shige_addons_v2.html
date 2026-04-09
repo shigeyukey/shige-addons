@@ -1,0 +1,396 @@
+
+    <!DOCTYPE html>
+    <html>
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <head>
+        <title>Shige addons</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #222222;
+                color: #ffffff;
+                padding: 20px;
+            }
+
+            .header {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+                margin-bottom: 10px;
+            }
+
+            .header p {
+                font-size: 14px;
+                color: #aaaaaa;
+            }
+
+            .items-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+
+            .item-card {
+                background-color: #333333;
+                border: 1px solid #444444;
+                border-radius: 10px;
+                overflow: hidden;
+                transition: transform 0.2s, box-shadow 0.2s;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .item-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            }
+
+            .item-image-container {
+                width: 100%;
+                height: 200px;
+                background-color: #1a1a1a;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            .item-image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                background-color: #1a1a1a;
+            }
+
+            .no-image {
+                color: #666666;
+                font-size: 14px;
+            }
+
+            .item-label {
+                font-size: 18px;
+                font-weight: bold;
+                padding: 15px 15px 8px 15px;
+                color: #1e90ff;
+            }
+
+            .item-description {
+                font-size: 13px;
+                color: #cccccc;
+                padding: 0 15px 12px 15px;
+                flex-grow: 1;
+            }
+
+            .item-link {
+                display: inline-block;
+                margin: 0 15px 15px 15px;
+                padding: 8px 15px;
+                background-color: #1e90ff;
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 12px;
+                font-weight: bold;
+                text-align: center;
+                transition: background-color 0.2s;
+            }
+
+            .item-link:hover {
+                background-color: #1478d2;
+                cursor: pointer;
+            }
+
+            ::-webkit-scrollbar {
+                width: 16px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background-color: #333333;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 10px;
+                border: 3px solid transparent;
+                background-clip: content-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h3>🎮Shige addo-ns (for Patrons)</h3>
+            <p>Hi I’m Anki geek and developer Shigeඞ! So far I’ve developed 150+ add-ons (fixed, customized, created). If you support my volunteer development on Patreon you’ll get access to exclusive add-ons. ($5/Month, not related to the official Anki.)
+</p>
+        </div>
+
+        <div class="items-grid">
+            
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/refs/heads/main/addons_media/thumbnails04/00_animation.webp" alt="Patreon only addons">
+            </div>
+            <h3 class="item-label">Patreon only addons</h3>
+            <p class="item-description">Support my work on Patreon ($5/month) for access to Patrons-only add-ons!</p>
+            <a href="https://www.patreon.com/Shigeyuki" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon(01).webp" alt="🌱New Cards Farm 2">
+            </div>
+            <h3 class="item-label">🌱New Cards Farm 2</h3>
+            <p class="item-description">(Patron) You can grow crops and flowers with the new cards you have learned.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-02.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_Medley.webp" alt="⚔️AnkiArcade Medley">
+            </div>
+            <h3 class="item-label">⚔️AnkiArcade Medley</h3>
+            <p class="item-description">(Patron) multiple mini games, progress bar, pomodoro timer, and more.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/Home.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_chunk_progressbar.webp" alt="⌛️Chunk Progressbar">
+            </div>
+            <h3 class="item-label">⌛️Chunk Progressbar</h3>
+            <p class="item-description">(Patron) Progress bars for chunking Anki cards.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/progress-bar-for-anki.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/refs/heads/main/addons_media/thumbnails04/AnkiArcadev1.8.5.webp" alt="⚔️AnkiArcade v1.8.5 update info">
+            </div>
+            <h3 class="item-label">⚔️AnkiArcade v1.8.5 update info</h3>
+            <p class="item-description">(Patron) multiple mini games, progress bar, pomodoro timer, and more.</p>
+            <a href="https://youtu.be/DVr3pEDn3EM" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/refs/heads/main/addons_media/thumbnails04/LeadarboardPlus.webp" alt="🎖️Anki Leaderboard Plus">
+            </div>
+            <h3 class="item-label">🎖️Anki Leaderboard Plus</h3>
+            <p class="item-description">(Patreon) Real time sync of the Anki Leaderbord during review</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/Anki-Leaderboard-Plus.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_Resident_Anki.webp" alt="🧟Resident Anki">
+            </div>
+            <h3 class="item-label">🧟Resident Anki</h3>
+            <p class="item-description">(Patron) Shooting Game with Mini Zombies.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/06-resident-anki.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon-dinotimer.webp" alt="🦖Dinotimer">
+            </div>
+            <h3 class="item-label">🦖Dinotimer</h3>
+            <p class="item-description">(Patron) DinoTimer - Raising Dinosaurs with Pomodoro Study.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/dino-timer.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_pomotimer.webp" alt="🍅Pomotimer">
+            </div>
+            <h3 class="item-label">🍅Pomotimer</h3>
+            <p class="item-description">(Patron) Circular progress bar with transparent background.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/pomotimer.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_new_cards_farm.webp" alt="🌱New Cards Farm">
+            </div>
+            <h3 class="item-label">🌱New Cards Farm</h3>
+            <p class="item-description">(Patron) You can grow crops and flowers with the new cards you have learned.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-01.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/new_card_heatmap.webp" alt="📅New Card Heatmap">
+            </div>
+            <h3 class="item-label">📅New Card Heatmap</h3>
+            <p class="item-description">(Patron) Show calendar and streaks of New cards learned, like the review heatmap.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/new-card-heatmap.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/EaseScouter_thumbnail.webp" alt="👓️EaseScouter">
+            </div>
+            <h3 class="item-label">👓️EaseScouter</h3>
+            <p class="item-description">(Patron) Visual feedback on Ease, Answer and Interval with multilingual text. </p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/easescouter.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Animated_coins_02.webp" alt="🎖️Animation coins">
+            </div>
+            <h3 class="item-label">🎖️Animation coins</h3>
+            <p class="item-description">(Patron) You can add animated coins to the Anki killstreaks.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/additional-animation-coins.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_AnkiKnights%20and%20Dragons.webp" alt="⚔️AnkiKnights and Dragons">
+            </div>
+            <h3 class="item-label">⚔️AnkiKnights and Dragons</h3>
+            <p class="item-description">(Patron) The knights fight many monsters.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/01-anki-knights--doragons.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_little_Ankimare.webp" alt="💎Little Ankimare">
+            </div>
+            <h3 class="item-label">💎Little Ankimare</h3>
+            <p class="item-description">(Patron) The hooded protagonist explores a mysterious cave in search of gemstones.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/02-little-ankimares.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_study_with_Zombie.webp" alt="🧟Study with Zombie">
+            </div>
+            <h3 class="item-label">🧟Study with Zombie</h3>
+            <p class="item-description">(Patron) Improved version of Doomanki, zombie emerges.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/05-study-with-zombie.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/Doomanki.webp" alt="🔫Doomanki">
+            </div>
+            <h3 class="item-label">🔫Doomanki</h3>
+            <p class="item-description">(Patron) Anki addon like FPS game. When you answer, gun animations, gunshot sounds, explosions.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/doomanki.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_meowknight.webp" alt="🐱Meowknight">
+            </div>
+            <h3 class="item-label">🐱Meowknight</h3>
+            <p class="item-description">(Patron) Cat knight fighting theme.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/13-meowknight.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_cats.webp" alt="🐱Cat Gathering in Anki">
+            </div>
+            <h3 class="item-label">🐱Cat Gathering in Anki</h3>
+            <p class="item-description">(Patron) Cats walking and running around.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/07-%EF%B8%8Fcat-gathering-in-anki.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/top_toolbar_icons.webp" alt="🎨Top toolbar icons">
+            </div>
+            <h3 class="item-label">🎨Top toolbar icons</h3>
+            <p class="item-description">(Patron) Decks Add-Browse-Stats-Sync</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/top-toolbar-icons.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_mozartanki.webp" alt="🎵Mozartanki">
+            </div>
+            <h3 class="item-label">🎵Mozartanki</h3>
+            <p class="item-description">(Patron) MIDI music player with 328 classical music tracks.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/11-mozartanki.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnail_CatGirlandSushi.webp" alt="🐱Cat Girl and Sushi">
+            </div>
+            <h3 class="item-label">🐱Cat Girl and Sushi</h3>
+            <p class="item-description">(Patron) Cute CatGirl eats a lot of Sushi.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/03-catgirl--sushi.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_redwitch_darkwitch.webp" alt="🧙Redwitch Darkwitch">
+            </div>
+            <h3 class="item-label">🧙Redwitch Darkwitch</h3>
+            <p class="item-description">(Patron) Wizard transforms</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/14-redwitch.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/thumbnails02/just_do_it_timer.webp" alt="🔥Just Do Anki timer">
+            </div>
+            <h3 class="item-label">🔥Just Do Anki timer</h3>
+            <p class="item-description">(Patron) Pomodoro timer with voice and animation that shouts JustDoIt when the time is up.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/just-anki-timer.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_v-ankipad.webp" alt="🎮Virtual Ankipad">
+            </div>
+            <h3 class="item-label">🎮Virtual Ankipad</h3>
+            <p class="item-description">(Patron) Review screens will show answer buttons like the gamepad.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/10-virtual-ankipad.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_ambient.webp" alt="⭐Ambient">
+            </div>
+            <h3 class="item-label">⭐Ambient</h3>
+            <p class="item-description">(Patron) Ambient sounds such as bonfires and rainfall are played instead of music.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/04-ambiebt-music.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/_thumbnail_zenmode.webp" alt="🧘‍♀Zenmode">
+            </div>
+            <h3 class="item-label">🧘‍♀Zenmode</h3>
+            <p class="item-description">(Patron) Turns off all animation, progress bar, and music.</p>
+            <a href="https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/08-%EF%B8%8Fzen-mode.html" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-image-container">
+                <img src="https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon_simple_fix.webp" alt="🔧Fix broken add-ons">
+            </div>
+            <h3 class="item-label">🔧Fix broken add-ons</h3>
+            <p class="item-description">(Contact) You can send me repair requests for broken add-ons.(Free)</p>
+            <a href="https://www.patreon.com/posts/free-simple-fix-99149368" target="_blank" class="item-link">View Details</a>
+        </div>
+        
+        </div>
+    </body>
+    </html>
+    
