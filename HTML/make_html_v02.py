@@ -5,10 +5,10 @@ import os
 HTML_FILE_NAME = 'shige_addons_v2.html'
 
 STR_PAGE_TITLE = "Shige addons"
-STR_TITLE_TEXT = "🎮Shige addo-ns (for Patrons)"
+STR_TITLE_TEXT = "🎮Shige's  addo-ns (for Patrons)"
 
 STR_TOP_TEXT = """\
-Hi I’m Anki geek and developer Shigeඞ! So far I’ve developed 150+ add-ons (fixed, customized, created). If you support my volunteer development on Patreon you’ll get access to exclusive add-ons. ($5/Month, not related to the official Anki.)
+Hi I’m Anki geek and developer Shigeඞ! So far I’ve developed 150+ add-ons (fixed, customized, created). If you support my volunteer development on Patreon you’ll get access to exclusive add-ons. ($5/Month. Not related to the official Anki)
 """
 
 
@@ -197,7 +197,7 @@ addon_contents = [
 
 
     {"url": "https://raw.githubusercontent.com/shigeyukey/shige-addons/main/addons_media/patreon(01).webp",
-    "label": "🌱New Cards Farm 2",
+    "label": "addon: 🌱New Cards Farm 2",
     "description": "(Patron) You can grow crops and flowers with the new cards you have learned.",
     "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-02.html"},
 
