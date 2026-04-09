@@ -3,7 +3,6 @@
 
 import os
 import json
-import base64
 
 HTML_FILE_NAME = 'shige_addons_v2.html'
 
@@ -14,43 +13,9 @@ STR_TOP_TEXT = """\
 Hi I’m Anki geek and developer Shigeඞ! So far I’ve developed 150+ Anki add-ons (fixed, customized, created). If you support my volunteer development on Patreon you’ll get access to exclusive add-ons. ($5/month. Not related to the official Anki)
 """
 
-BASE_DIR = os.path.dirname(
-                os.path.dirname(
-                    os.path.abspath(__file__))
-                )
-
-
-def get_image_as_base64(image_path:str):
-    try:
-
-        full_path = os.path.join(
-                                BASE_DIR,
-                                image_path.lstrip('/'))
-
-        print(full_path)
-        if os.path.exists(full_path):
-            with open(full_path, 'rb') as img_file:
-                encoded = base64.b64encode(
-                            img_file.read()).decode('utf-8')
-                ext = os.path.splitext(full_path)[1].lower()
-                mime_type = {
-                    'jpg': 'image/jpeg',
-                    'jpeg': 'image/jpeg',
-                    'png': 'image/png',
-                    'webp': 'image/webp'
-                    }.get(ext[1:], 'image/png')
-                return f"data:{mime_type};base64,{encoded}"
-
-    except Exception as e:
-        print(f"Error: {image_path} - {e}")
-
-    return None
-
-
 
 def make_html_content(addon_contents):
     items_html = ""
-
     for item in addon_contents:
         item:dict
 
@@ -61,14 +26,9 @@ def make_html_content(addon_contents):
         item_description = item.get("description", "")
 
         if item_url:
-            base64_image = get_image_as_base64(item_url)
-            if base64_image:
-                html_addon_content = f'<img src="{base64_image}" alt="{item_label}">'
-            else:
-                html_addon_content = '<div class="no-image">Image Load Failed</div>'
+            html_addon_content =  f'<img src="{item_url}" alt="{item_label}">'
         else:
-            html_addon_content = '<div class="no-image">No Image</div>'
-
+            html_addon_content =  '<div class="no-image">No Image</div>'
 
         items_html += f"""
         <div class="item-card">
