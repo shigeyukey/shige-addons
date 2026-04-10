@@ -39,8 +39,8 @@
         "url": "/addons_media/thumbnails05/Virtual Ankipad.webp",
         "label": "addon: 🎮Virtual Ankipad",
         "description": "Show colorful answer buttons for the reviewer. This makes the buttons more intuitive to press and visually more enjoyable. Their position can be moved by dragging.",
-        "data":"2025-12-06",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/10-virtual-ankipad.html"
+        "date":"Last update: 2025-12-06",
+        "link": "https://www.patreon.com/posts/97422306"
     },
 
     {
@@ -53,10 +53,19 @@
 
 
     {
+        "url": "/addons_media/thumbnails05/Review Card Farm.webp",
+        "label": "addon: 🌽Review Card Farm",
+        "description": "This add-on is a review card version of New Card Farm, basic usage is the same, some new features and options have been added. You can grow crops and flowers with the review cards you have learned. Crops 79, Color tooltip, Farmer animation, Random Crops, Replanting Crops, etc.",
+        "link": "https://www.patreon.com/posts/118533602",
+        "date":"Last update: 2024-12-23"
+    },
+
+
+    {
         "url": "/addons_media/patreon(01).webp",
         "label": "addon: 🌱New Cards Farm 2",
-        "description": "You can grow crops and flowers with the new cards you have learned.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-02.html",
+        "description": "You can grow crops and flowers with the new cards you have learned. Crops 79, Color tooltip, Farmer animation, Random Crops, Replanting Crops, etc.",
+        "link": "https://www.patreon.com/posts/109314080",
         "date":"Last update: 2024-11-07"
     },
     {
@@ -123,7 +132,8 @@
         "url": "/addons_media/thumbnails02/Animated_coins_02.webp",
         "label": "addon: 🎖️Animation coins",
         "description": "You can add animated coins to the Anki killstreaks.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/additional-animation-coins.html"
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/additional-animation-coins.html",
+        "date":"Last update 2026-02-07 (small bug fixed)"
     },
     {
         "url": "/addons_media/thumbnail_AnkiKnights and Dragons.webp",
@@ -206,8 +216,8 @@
     },
     {
         "url": "/addons_media/patreon_simple_fix.webp",
-        "label": "🔧Fix broken add-ons",
-        "description": "(Contact) You can send me repair requests for broken add-ons.(Free)",
+        "label": "Contact: 🔧Fix broken add-ons",
+        "description": " You can send me repair requests for broken add-ons.(Free)",
         "link": "https://www.patreon.com/posts/free-simple-fix-99149368"
     }
 ]

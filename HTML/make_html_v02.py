@@ -30,7 +30,7 @@ STR_SUB_TITLE_TEXT = (
                     )
 
 STR_SUB_TEXT = """\
-If you become a $5/month Patron you can download all of these Patron exclusive add-ons, Currently there are about 30 contents (16 add-ons + AnkiArcarde 15 themes).
+If you become a $5/month Patron you can download all of these Patron exclusive add-ons, Currently there are about 30 contents (16 add-ons + AnkiArcarde 15 themes) so you can get them for about 17 cents each!
 """
 
 
