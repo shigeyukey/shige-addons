@@ -1,9 +1,39 @@
 [
+
+
+
+
+    {
+        "url": "/addons_media/thumbnails05/LeaderboardPlusV3.webp",
+        "label": "addon: 🏆️Anki Leaderboard Plus v3",
+        "description": "Leaderboard displayed on top bar and updated in real time during review! This version added sync speed optimization and enhancements, UI for gamification mode, toast notifications for scores, improved tooltip design, and enhanced options, etc.",
+        "link": "https://www.patreon.com/posts/154968535",
+        "date":"Last update: 2026-04-7"
+    },
+    {
+        "url": "/addons_media/thumbnails05/liveWallpaper.webp",
+        "label": "addon: 🎞️Live Wallpaper for Anki",
+        "description": "Display live wallpapers for Anki (Animated wallpaper, Background video). Support for Anki-Home, Reviewer, Overview, and Congrats. The wallpaper video includes 18 types for now! Fireplace, Ocean, River, Galaxy, Cat, etc.",
+        "link": "https://www.patreon.com/posts/146988435",
+        "date":"Last update: 2025-12-30"
+    },
+
+    {
+        "url": "/addons_media/thumbnails05/Yearly Heatmap Generator.webp",
+        "label": "addon: Yearly Heatmap Generator",
+        "description": "Generate all heatmaps as an image (default: 800px PNG). Colors and designs can be customized as options. You can use it when you want to share yearly learning progress or when you want to share Streeck achievements.",
+        "link": "https://www.patreon.com/posts/145952423",
+        "date":"Last update: 2025-12-16"
+    },
+
+
+
     {
         "url": "/addons_media/patreon(01).webp",
         "label": "addon: 🌱New Cards Farm 2",
         "description": "(Patron) You can grow crops and flowers with the new cards you have learned.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-02.html"
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-02.html",
+        "date":"Last update: 2024-11-07"
     },
     {
         "url": "/addons_media/_thumbnail_Medley.webp",

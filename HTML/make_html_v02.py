@@ -8,11 +8,31 @@ import base64
 HTML_FILE_NAME = 'shige_addons_v2.html'
 
 STR_PAGE_TITLE = "Shige addons"
-STR_TITLE_TEXT = "🎮Shige's addo-ns (for Patrons)"
+
+STR_TOP_TITLE_TEXT = "💖Looking for Supporters!"
 
 STR_TOP_TEXT = """\
-Hi I’m Anki geek and developer Shigeඞ! So far I’ve developed 150+ Anki add-ons (fixed, customized, created). If you support my volunteer development on Patreon you’ll get access to exclusive add-ons. ($5/month. Not related to the official Anki)
+Hi I’m Shigeඞ a developer and bookworm who loves Anki! I’ve been active since 2023 and have developed 150+ add-ons so far (fixed, customized, created). I'm looking for supporters on Patreon to develop many more powerful and useful add-ons in the future! If you become a patron you’ll get access to all my patron exclusive add-ons for gamifying learning. (Not related to the official Anki)
 """
+
+STR_PATREON_LINK = (
+                f'<a href="https://www.patreon.com/Shigeyuki" '
+                f'target="_blank" '
+                f'style="color: #1e90ff;" '
+                f'>'
+                )
+
+STR_SUB_TITLE_TEXT = (
+                    f"🎮Shige's addo-ns "
+                    f"{STR_PATREON_LINK}"
+                    f"(Patreon $5/month)"
+                    f"</a>"
+                    )
+
+STR_SUB_TEXT = """\
+If you become a $5/month Patron you can download all of these Patron exclusive add-ons:
+"""
+
 
 BASE_DIR = os.path.dirname(
                 os.path.dirname(
@@ -60,14 +80,24 @@ def make_html_content(addon_contents):
         item_link = item.get("link", "")
         item_description = item.get("description", "")
 
+        date_html = ""
+        if item_date:
+            date_html = f'<p class="image-date">{item_date}</p>'
+
         if item_url:
             base64_image = get_image_as_base64(item_url)
             if base64_image:
-                html_addon_content = f'<img src="{base64_image}" alt="{item_label}">'
+                html_addon_content = (
+                    f'<img src="{base64_image}" alt="{item_label}">'
+                    )
             else:
-                html_addon_content = '<div class="no-image">Image Load Failed</div>'
+                html_addon_content = (
+                    f'<div class="no-image">Image Load Failed</div>'
+                )
         else:
-            html_addon_content = '<div class="no-image">No Image</div>'
+            html_addon_content = (
+                f'<div class="no-image">No Image</div>'
+                )
 
 
         items_html += f"""
@@ -75,6 +105,7 @@ def make_html_content(addon_contents):
             <div class="item-image-container">
                 {html_addon_content}
             </div>
+            {date_html}
             <h3 class="item-label">{item_label}</h3>
             <p class="item-description">{item_description}</p>
             <a href="{item_link}" target="_blank" class="item-link">View Details</a>
@@ -113,7 +144,7 @@ def make_html_content(addon_contents):
             }}
 
             .header p {{
-                font-size: 14px;
+                font-size: 12px;
                 color: #aaaaaa;
             }}
 
@@ -157,6 +188,14 @@ def make_html_content(addon_contents):
                 background-color: #1a1a1a;
             }}
 
+            .image-date {{
+                font-size: 12px;
+                color: #aaaaaa;
+                padding: 5px 10px;
+                margin: 0;
+                text-align: right;
+            }}
+
             .no-image {{
                 color: #666666;
                 font-size: 14px;
@@ -165,7 +204,7 @@ def make_html_content(addon_contents):
             .item-label {{
                 font-size: 18px;
                 font-weight: bold;
-                padding: 15px 15px 8px 15px;
+                padding: 2px 5px 8px 15px;
                 color: #1e90ff;
             }}
 
@@ -213,8 +252,10 @@ def make_html_content(addon_contents):
     </head>
     <body>
         <div class="header">
-            <h3>{STR_TITLE_TEXT}</h3>
+            <h4>{STR_TOP_TITLE_TEXT}</h4>
             <p>{STR_TOP_TEXT}</p>
+            <h4>{STR_SUB_TITLE_TEXT}</h4>
+            <p>{STR_SUB_TEXT}</p>
         </div>
 
         <div class="items-grid">
@@ -243,4 +284,13 @@ os.makedirs(os.path.dirname(file_path), exist_ok=True)
 with open(file_path, 'w', encoding='utf-8') as file:
     file.write(html_content)
 
+"""
+    {
+        "url": "/addons_media/🟩.webp",
+        "label": "addon: 🟩",
+        "description": "🟩",
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/🟩",
+        "date":"Last update: 🟩"
+    },
+"""
 
