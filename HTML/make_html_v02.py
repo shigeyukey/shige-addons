@@ -287,7 +287,7 @@ with open(file_path, 'w', encoding='utf-8') as file:
 """
     {
         "url": "/addons_media/🟩.webp",
-        "label": "addon: 🟩",
+        "label": "addon: ",
         "description": "🟩",
         "link": "https://shigeyukey.github.io/shige-addons-wiki/🟩",
         "date":"Last update: 🟩"
