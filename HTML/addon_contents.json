@@ -78,7 +78,8 @@
         "url": "/addons_media/patreon_chunk_progressbar.webp",
         "label": "addon: ⌛️Chunk Progressbar",
         "description": "Progress bars for chunking Anki cards.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/progress-bar-for-anki.html"
+        "link": "https://www.patreon.com/posts/101345722",
+        "date": "Last update: 2024-11-17"
     },
     {
         "url": "/addons_media/thumbnails04/AnkiArcadev1.8.5.webp",
@@ -86,12 +87,7 @@
         "description": "[ AnkiArcade ] Multiple mini games, progress bar, pomodoro timer, and more.",
         "link": "https://youtu.be/DVr3pEDn3EM"
     },
-    {
-        "url": "/addons_media/thumbnails04/LeadarboardPlus.webp",
-        "label": "addon: 🎖️Anki Leaderboard Plus",
-        "description": "Real time sync of the Anki Leaderbord during review",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/Anki-Leaderboard-Plus.html"
-    },
+
     {
         "url": "/addons_media/thumbnail_Resident_Anki.webp",
         "label": "addon: 🧟Resident Anki",
@@ -110,24 +106,14 @@
         "description": "Circular progress bar with transparent background.",
         "link": "https://shigeyukey.github.io/shige-addons-wiki/pomotimer.html"
     },
-    {
-        "url": "/addons_media/patreon_new_cards_farm.webp",
-        "label": "addon: 🌱New Cards Farm",
-        "description": "You can grow crops and flowers with the new cards you have learned.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-01.html"
-    },
+
     {
         "url": "/addons_media/thumbnails02/new_card_heatmap.webp",
         "label": "addon: 📅New Card Heatmap",
         "description": "Show calendar and streaks of New cards learned, like the review heatmap.",
         "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-heatmap.html"
     },
-    {
-        "url": "/addons_media/EaseScouter_thumbnail.webp",
-        "label": "addon: 👓️EaseScouter",
-        "description": "Visual feedback on Ease, Answer and Interval with multilingual text. ",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/easescouter.html"
-    },
+
     {
         "url": "/addons_media/thumbnails02/Animated_coins_02.webp",
         "label": "addon: 🎖️Animation coins",

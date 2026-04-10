@@ -5,7 +5,8 @@ import os
 import json
 import base64
 
-HTML_FILE_NAME = 'shige_addons_v2.html'
+# HTML_FILE_NAME = 'shige_addons_v2.html'
+HTML_FILE_NAME = 'ShigeAddons.html'
 
 STR_PAGE_TITLE = "Shige addons"
 
@@ -293,4 +294,27 @@ with open(file_path, 'w', encoding='utf-8') as file:
         "date":"Last update: 🟩"
     },
 """
+
+
+    # {
+    #     "url": "/addons_media/thumbnails04/LeadarboardPlus.webp",
+    #     "label": "addon: 🎖️Anki Leaderboard Plus",
+    #     "description": "Real time sync of the Anki Leaderbord during review",
+    #     "link": "https://shigeyukey.github.io/shige-addons-wiki/Anki-Leaderboard-Plus.html"
+    # },
+
+
+    # {
+    #     "url": "/addons_media/patreon_new_cards_farm.webp",
+    #     "label": "addon: 🌱New Cards Farm",
+    #     "description": "You can grow crops and flowers with the new cards you have learned.",
+    #     "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-farm/new-card-farm-01.html"
+    # },
+
+    # {
+    #     "url": "/addons_media/EaseScouter_thumbnail.webp",
+    #     "label": "addon: 👓️EaseScouter",
+    #     "description": "Visual feedback on Ease, Answer and Interval with multilingual text. ",
+    #     "link": "https://shigeyukey.github.io/shige-addons-wiki/easescouter.html"
+    # },
 
