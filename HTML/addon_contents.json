@@ -1,15 +1,94 @@
 [
 
 
+    {
+        "url": "/addons_media/thumbnails05/thumbnail_1280px_720px.webp",
+        "label": "addon: ⚔️AnkiArcade (104MB)",
+        "description": "AnkiArcade is a multi minigame add-on that I am primarily developing. Aiming for quality comparable to indie games, it currently features 40+ animated pixel art characters, 400+ sound effects, 500+ BGM tracks, and 400+ pixel art enemy characters, progress bar, pomodoro timer, and more!",
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/Home.html",
+        "date":"Last update: 2025-12-05"
+    },
 
+    {
+        "url": "/addons_media/patreon(01).webp",
+        "label": "addon: 🌱New Cards Farm 2",
+        "description": "You can grow crops and flowers with the new cards you have learned. Crops 79, Color tooltip, Farmer animation, Random Crops, Replanting Crops, etc.",
+        "link": "https://www.patreon.com/posts/109314080",
+        "date":"Last update: 2024-11-07"
+    },
+
+
+    {
+        "url": "/addons_media/patreon-dinotimer.webp",
+        "label": "addon: 🦖Dinotimer",
+        "description": "Let's raise dinosaurs from eggs while studying with the Pomodoro timer!",
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/dino-timer.html"
+    },
 
     {
         "url": "/addons_media/thumbnails05/LeaderboardPlusV3.webp",
         "label": "addon: 🏆️Anki Leaderboard Plus v3",
-        "description": "Leaderboard displayed on top bar and updated in real time during review! This version added sync speed optimization and enhancements, UI for gamification mode, toast notifications for scores, improved tooltip design, and enhanced options, etc.",
+        "description": "Leaderboard displayed on top bar and updated in real time during review! This version added sync speed optimization and enhancements, UI for gamification mode, toast notifications for scores, improved tooltip design, and enhanced options, etc. Revenue from this add-on will be used to maintain and enhance the leaderboard Free server.",
         "link": "https://www.patreon.com/posts/154968535",
         "date":"Last update: 2026-04-7"
     },
+
+    {
+        "url": "/addons_media/patreon_chunk_progressbar.webp",
+        "label": "addon: ⌛️Chunk Progressbar",
+        "description": "Progress bars for chunking Anki cards.",
+        "link": "https://www.patreon.com/posts/101345722",
+        "date": "Last update: 2024-11-17"
+    },
+
+    {
+        "url": "/addons_media/thumbnails05/Answer text feedback.webp",
+        "label": "addon: 🚦Answer text feedback",
+        "description": "In the reviewer display text animation feedback based on your answers. There are features to display card type, due date, and ease (or difficulty).",
+        "link": "https://www.patreon.com/posts/145097996",
+        "date":"Last update: 2025-12-13"
+    },
+
+    {
+        "url": "/addons_media/thumbnails02/Animated_coins_02.webp",
+        "label": "addon: 🎖️Animation coins",
+        "description": "You can add animated coins to the Anki killstreaks.",
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/additional-animation-coins.html",
+        "date":"Last update 2026-02-07 (small bug fixed)"
+    },
+
+    {
+        "url": "/addons_media/thumbnails05/Virtual Ankipad.webp",
+        "label": "addon: 🎮Virtual Ankipad",
+        "description": "Show colorful answer buttons for the reviewer. This makes the buttons more intuitive to press and visually more enjoyable. Their position can be moved by dragging.",
+        "date":"Last update: 2025-12-06",
+        "link": "https://www.patreon.com/posts/97422306"
+    },
+
+
+    {
+        "url": "/addons_media/thumbnails05/Review Card Farm.webp",
+        "label": "addon: 🌽Review Card Farm",
+        "description": "This add-on is a review card version of New Card Farm, basic usage is the same, some new features and options have been added. You can grow crops and flowers with the review cards you have learned. Crops 79, Color tooltip, Farmer animation, Random Crops, Replanting Crops, etc.",
+        "link": "https://www.patreon.com/posts/118533602",
+        "date":"Last update: 2024-12-23"
+    },
+
+    {
+        "url": "/addons_media/patreon_pomotimer.webp",
+        "label": "addon: 🍅Pomotimer",
+        "description": "Circular progress bar with transparent background.",
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/pomotimer.html"
+    },
+
+    {
+        "url": "/addons_media/thumbnails02/new_card_heatmap.webp",
+        "label": "addon: 📅New Card Heatmap",
+        "description": "Show calendar and streaks of New cards learned, like the review heatmap.",
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-heatmap.html"
+    },
+
+
     {
         "url": "/addons_media/thumbnails05/liveWallpaper.webp",
         "label": "addon: 🎞️Live Wallpaper for Anki",
@@ -27,21 +106,6 @@
     },
 
 
-    {
-        "url": "/addons_media/thumbnails05/Answer text feedback.webp",
-        "label": "addon: 🚦Answer text feedback",
-        "description": "In the reviewer display text animation feedback based on your answers. There are features to display card type, due date, and ease (or difficulty).",
-        "link": "https://www.patreon.com/posts/145097996",
-        "date":"Last update: 2025-12-13"
-    },
-
-    {
-        "url": "/addons_media/thumbnails05/Virtual Ankipad.webp",
-        "label": "addon: 🎮Virtual Ankipad",
-        "description": "Show colorful answer buttons for the reviewer. This makes the buttons more intuitive to press and visually more enjoyable. Their position can be moved by dragging.",
-        "date":"Last update: 2025-12-06",
-        "link": "https://www.patreon.com/posts/97422306"
-    },
 
     {
         "url": "/addons_media/thumbnails05/AnkiArcade v1.9.7.webp",
@@ -53,74 +117,14 @@
 
 
     {
-        "url": "/addons_media/thumbnails05/Review Card Farm.webp",
-        "label": "addon: 🌽Review Card Farm",
-        "description": "This add-on is a review card version of New Card Farm, basic usage is the same, some new features and options have been added. You can grow crops and flowers with the review cards you have learned. Crops 79, Color tooltip, Farmer animation, Random Crops, Replanting Crops, etc.",
-        "link": "https://www.patreon.com/posts/118533602",
-        "date":"Last update: 2024-12-23"
-    },
-
-
-    {
-        "url": "/addons_media/patreon(01).webp",
-        "label": "addon: 🌱New Cards Farm 2",
-        "description": "You can grow crops and flowers with the new cards you have learned. Crops 79, Color tooltip, Farmer animation, Random Crops, Replanting Crops, etc.",
-        "link": "https://www.patreon.com/posts/109314080",
-        "date":"Last update: 2024-11-07"
-    },
-    {
-        "url": "/addons_media/_thumbnail_Medley.webp",
-        "label": "demo video: ⚔️AnkiArcade Medley",
-        "description": "Multiple mini games, progress bar, pomodoro timer, and more.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/Home.html"
-    },
-    {
-        "url": "/addons_media/patreon_chunk_progressbar.webp",
-        "label": "addon: ⌛️Chunk Progressbar",
-        "description": "Progress bars for chunking Anki cards.",
-        "link": "https://www.patreon.com/posts/101345722",
-        "date": "Last update: 2024-11-17"
-    },
-    {
         "url": "/addons_media/thumbnails04/AnkiArcadev1.8.5.webp",
         "label": "info: ⚔️AnkiArcade v1.8.5 update info",
         "description": "[ AnkiArcade ] Multiple mini games, progress bar, pomodoro timer, and more.",
         "link": "https://youtu.be/DVr3pEDn3EM"
     },
 
-    {
-        "url": "/addons_media/thumbnail_Resident_Anki.webp",
-        "label": "addon: 🧟Resident Anki",
-        "description": "[ AnkiArcade ] Shooting Game with Mini Zombies. This theme is included in the latest version of AnkiArcade.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/06-resident-anki.html"
-    },
-    {
-        "url": "/addons_media/patreon-dinotimer.webp",
-        "label": "addon: 🦖Dinotimer",
-        "description": "DinoTimer - Raising Dinosaurs with Pomodoro Study.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/dino-timer.html"
-    },
-    {
-        "url": "/addons_media/patreon_pomotimer.webp",
-        "label": "addon: 🍅Pomotimer",
-        "description": "Circular progress bar with transparent background.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/pomotimer.html"
-    },
 
-    {
-        "url": "/addons_media/thumbnails02/new_card_heatmap.webp",
-        "label": "addon: 📅New Card Heatmap",
-        "description": "Show calendar and streaks of New cards learned, like the review heatmap.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/new-card-heatmap.html"
-    },
 
-    {
-        "url": "/addons_media/thumbnails02/Animated_coins_02.webp",
-        "label": "addon: 🎖️Animation coins",
-        "description": "You can add animated coins to the Anki killstreaks.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/additional-animation-coins.html",
-        "date":"Last update 2026-02-07 (small bug fixed)"
-    },
     {
         "url": "/addons_media/thumbnail_AnkiKnights and Dragons.webp",
         "label": "addon: ⚔️AnkiKnights and Dragons",
@@ -133,17 +137,19 @@
         "description": "[ AnkiArcade ] The hooded protagonist explores a mysterious cave in search of gemstones. This theme is included in the latest version of AnkiArcade.",
         "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/02-little-ankimares.html"
     },
+
+
+    {
+        "url": "/addons_media/thumbnail_Resident_Anki.webp",
+        "label": "addon: 🧟Resident Anki",
+        "description": "[ AnkiArcade ] Shooting Game with Mini Zombies. This theme is included in the latest version of AnkiArcade.",
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/06-resident-anki.html"
+    },
     {
         "url": "/addons_media/thumbnail_study_with_Zombie.webp",
         "label": "addon: 🧟Study with Zombie",
         "description": "[ AnkiArcade ] Improved version of Doomanki, zombie emerges. This theme is included in the latest version of AnkiArcade.",
         "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/05-study-with-zombie.html"
-    },
-    {
-        "url": "/addons_media/thumbnails02/Doomanki.webp",
-        "label": "addon: 🔫Doomanki",
-        "description": "Anki addon like FPS game. When you answer, gun animations, gunshot sounds, explosions.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/doomanki.html"
     },
     {
         "url": "/addons_media/_thumbnail_meowknight.webp",
@@ -157,35 +163,27 @@
         "description": "[ AnkiArcade ] Cats walking and running around. This theme is included in the latest version of AnkiArcade.",
         "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/07-%EF%B8%8Fcat-gathering-in-anki.html"
     },
-    {
-        "url": "/addons_media/thumbnails02/top_toolbar_icons.webp",
-        "label": "addon: 🎨Top toolbar icons",
-        "description": "Decks Add-Browse-Stats-Sync",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/top-toolbar-icons.html"
-    },
+
     {
         "url": "/addons_media/patreon_mozartanki.webp",
         "label": "addon: 🎵Mozartanki",
         "description": "[ AnkiArcade ] MIDI music player with 328 classical music tracks. This theme is included in the latest version of AnkiArcade.",
         "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/11-mozartanki.html"
     },
-    {
-        "url": "/addons_media/thumbnail_CatGirlandSushi.webp",
-        "label": "addon: 🐱Cat Girl and Sushi",
-        "description": "[ AnkiArcade ] Cute CatGirl eats a lot of Sushi. This theme is included in the latest version of AnkiArcade.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/03-catgirl--sushi.html"
-    },
+
+
     {
         "url": "/addons_media/_thumbnail_redwitch_darkwitch.webp",
         "label": "addon: 🧙Redwitch Darkwitch",
         "description": "[ AnkiArcade ] Wizard transforms. This theme is included in the latest version of AnkiArcade.",
         "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/14-redwitch.html"
     },
+
     {
-        "url": "/addons_media/thumbnails02/just_do_it_timer.webp",
-        "label": "addon: 🔥Just Do Anki timer",
-        "description": "Pomodoro timer with voice and animation that shouts JustDoIt when the time is up.",
-        "link": "https://shigeyukey.github.io/shige-addons-wiki/just-anki-timer.html"
+        "url": "/addons_media/thumbnail_CatGirlandSushi.webp",
+        "label": "addon: 🐱Cat Girl and Sushi",
+        "description": "[ AnkiArcade ] Cute CatGirl eats a lot of Sushi. This theme is included in the latest version of AnkiArcade.",
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/03-catgirl--sushi.html"
     },
 
     {
@@ -200,6 +198,28 @@
         "description": "[ AnkiArcade ] Turns off all animation, progress bar, and music. This theme is included in the latest version of AnkiArcade.",
         "link": "https://shigeyukey.github.io/shige-addons-wiki/AnkiArcade/themes/08-%EF%B8%8Fzen-mode.html"
     },
+
+    {
+        "url": "/addons_media/thumbnails02/just_do_it_timer.webp",
+        "label": "addon: 🔥Just Do Anki timer",
+        "description": "Pomodoro timer with voice and animation that shouts JustDoIt when the time is up.",
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/just-anki-timer.html"
+    },
+
+    {
+        "url": "/addons_media/thumbnails02/Doomanki.webp",
+        "label": "addon: 🔫Doomanki",
+        "description": "Anki addon like FPS game. When you answer, gun animations, gunshot sounds, explosions.",
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/doomanki.html"
+    },
+
+    {
+        "url": "/addons_media/thumbnails02/top_toolbar_icons.webp",
+        "label": "addon: 🎨Top toolbar icons",
+        "description": "Decks Add-Browse-Stats-Sync",
+        "link": "https://shigeyukey.github.io/shige-addons-wiki/top-toolbar-icons.html"
+    },
+
     {
         "url": "/addons_media/patreon_simple_fix.webp",
         "label": "Contact: 🔧Fix broken add-ons",

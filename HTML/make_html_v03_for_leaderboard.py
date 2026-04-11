@@ -10,52 +10,29 @@ HTML_FILE_NAME = 'ShigeAddons.html'
 
 STR_PAGE_TITLE = "Shige addons"
 
-# STR_TOP_TITLE_TEXT = "💖Looking for Supporters"
+STR_TOP_TITLE_TEXT = "💖Looking for Supporters!"
 
-def make_url(url):
-    str_url_link = (
-                f'<a href="{url}" '
+STR_TOP_TEXT = """\
+Hi I’m Shigeඞ a developer and bookworm who loves Anki! I’ve been active since 2023 and have developed 150+ add-ons so far (fixed, customized, created). I'm looking for supporters on Patreon to develop many more powerful and useful add-ons in the future! If you become a patron you’ll get access to all my patron exclusive add-ons for gamifying learning. (Not related to the official Anki)
+"""
+
+STR_PATREON_LINK = (
+                f'<a href="https://www.patreon.com/Shigeyuki" '
                 f'target="_blank" '
                 f'style="color: #1e90ff;" '
                 f'>'
                 )
-    return str_url_link
 
-str_patreon_url = make_url(
-    "https://www.patreon.com/Shigeyuki")
-
-STR_TOP_TITLE_TEXT = (
-                    f"🎮Shige's Gamification add-ons "
-                    f"<br>"
-                    f"{str_patreon_url}"
-                    f'<span style="font-size:14px;">'
-                        f"(Patrons only $5/month)"
-                    f'</span>'
+STR_SUB_TITLE_TEXT = (
+                    f"🎮Shige's addo-ns "
+                    f"{STR_PATREON_LINK}"
+                    f"(Patreon $5/month)"
                     f"</a>"
                     )
 
-str_contact_url = make_url(
-    "https://shigeyukey.github.io/shige-addons-wiki/contact.html"
-    )
-
-STR_TOP_TEXT = f"""\
-Hi I'm Shigeඞ thanks for using this add-on! I develop as a hobby and so far I've fixed 80+ broken add-ons for free by request from users and released 30+ original add-ons for free! If you have any repair requests or ideas feel free to {str_contact_url}contact me</a>.
-<br><br>
-If you become a patron and support my volunteer development, you will be able to download all the patron exclusive gamification add-ons that I'm primarily developing. Currently there are about 30 contents (16 add-ons + AnkiArcarde 15 themes) These support the latest version of Anki and if you encounter any unexpected issues a refund is possible. These proceeds will be invested in future development and I plan to eventually make all paid add-ons free. (Not related to the official Anki.)
+STR_SUB_TEXT = """\
+If you become a $5/month Patron you can download all of these Patron exclusive add-ons, Currently there are about 30 contents (16 add-ons + AnkiArcarde 15 themes) so you can get them for about 17 cents each!
 """
-
-STR_SUB_TITLE_TEXT = ""
-
-STR_SUB_TEXT = """
-"""
-
-# STR_SUB_TEXT = """\
-# If you become a $5/month Patron you can download all of these Patron exclusive add-ons, currently there are about 30 contents (16 add-ons + AnkiArcarde 15 themes) Not related to the official Anki.
-# """
-
-# STR_TOP_TEXT = """\
-# Hi I’m Shigeඞ a developer and bookworm who loves Anki! I’ve been active since 2023 and have developed 150+ add-ons so far (fixed, customized, created). I'm looking for supporters on Patreon to develop many more powerful and useful add-ons in the future! If you become a patron you’ll get access to all my patron exclusive add-ons for gamifying learning. (Not related to the official Anki)
-# """
 
 
 BASE_DIR = os.path.dirname(
