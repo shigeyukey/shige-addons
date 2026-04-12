@@ -63,31 +63,32 @@ BASE_DIR = os.path.dirname(
                     os.path.abspath(__file__))
                 )
 
+USE_BASE64_IMAGE = False
+GITHUB_RAW_BASE = "https://raw.githubusercontent.com/shigeyukey/shige-addons/main"
 
 def get_image_as_base64(image_path:str):
+    if not USE_BASE64_IMAGE:
+        return GITHUB_RAW_BASE + image_path
+
     try:
-
         full_path = os.path.join(
-                                BASE_DIR,
-                                image_path.lstrip('/'))
-
+            BASE_DIR,
+            image_path.lstrip('/'))
         print(full_path)
         if os.path.exists(full_path):
             with open(full_path, 'rb') as img_file:
                 encoded = base64.b64encode(
-                            img_file.read()).decode('utf-8')
+                    img_file.read()).decode('utf-8')
                 ext = os.path.splitext(full_path)[1].lower()
                 mime_type = {
                     'jpg': 'image/jpeg',
                     'jpeg': 'image/jpeg',
                     'png': 'image/png',
                     'webp': 'image/webp'
-                    }.get(ext[1:], 'image/png')
+                }.get(ext[1:], 'image/png')
                 return f"data:{mime_type};base64,{encoded}"
-
     except Exception as e:
         print(f"Error: {image_path} - {e}")
-
     return None
 
 
@@ -112,7 +113,10 @@ def make_html_content(addon_contents):
             base64_image = get_image_as_base64(item_url)
             if base64_image:
                 html_addon_content = (
-                    f'<img src="{base64_image}" alt="{item_label}">'
+                    f'<img src="{base64_image}" alt="{item_label}" '
+                    f'loading="lazy" '
+                    f'onload="console.log(\'loaded: {item_label}\')"'
+                    f'>'
                     )
             else:
                 html_addon_content = (
