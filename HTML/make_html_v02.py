@@ -115,7 +115,6 @@ def make_html_content(addon_contents):
                 html_addon_content = (
                     f'<img src="{base64_image}" alt="{item_label}" '
                     f'loading="lazy" '
-                    f'onload="console.log(\'loaded: {item_label}\')"'
                     f'>'
                     )
             else:
